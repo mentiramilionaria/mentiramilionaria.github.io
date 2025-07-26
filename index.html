@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -19,10 +20,15 @@
     ul {
       list-style: none;
       padding: 0;
+      margin-top: 15px;
+    }
+    ul li {
+      margin-bottom: 12px;
+      font-size: 18px;
     }
     ul li::before {
-      content: "✅ ";
-      color: green;
+      content: "✔️"; /* ícone check */
+      margin-right: 8px;
     }
     a.button {
       display: inline-block;
@@ -32,18 +38,31 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 5px;
-      margin-top: 20px;
+      margin-top: 25px;
+      transition: background 0.3s ease;
+    }
+    a.button:hover {
+      background: #b71c1c;
     }
     .guarantee {
       font-size: 14px;
       color: #555;
-      margin-top: 10px;
+      margin-top: 15px;
+    }
+    #cover {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto 30px auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
     #faq {
       margin-top: 40px;
     }
     #faq h2 {
       color: #d32f2f;
+      margin-bottom: 20px;
     }
     #faq div {
       margin-bottom: 15px;
@@ -51,6 +70,8 @@
   </style>
 </head>
 <body>
+  <img id="cover" src="https://via.placeholder.com/600x400?text=Capa+do+eBook+Mentira+Milionária" alt="Capa do eBook Mentira Milionária" />
+
   <h1>🚨 <em>MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra</em> 🚨</h1>
   <p>Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br>
   Este eBook gratuito revela os bastidores sombrios do marketing digital e por que <strong>99% das promessas são mentiras disfarçadas de sucesso</strong>.</p>
@@ -63,7 +84,7 @@
 
   <p><strong>⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</strong></p>
 
-  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária" class="button">
+  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária" class="button" target="_blank" rel="noopener noreferrer">
     Quero receber o eBook pelo WhatsApp
   </a>
 
@@ -72,7 +93,7 @@
     Sem spam e sem cobranças futuras.
   </p>
 
-  <section id="faq" style="font-family: Arial, sans-serif; max-width: 600px; margin-left:auto; margin-right:auto;">
+  <section id="faq">
     <h2>Perguntas Frequentes (FAQ)</h2>
     <div>
       <strong>O eBook é realmente gratuito?</strong>
