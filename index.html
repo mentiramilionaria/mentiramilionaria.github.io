@@ -35,18 +35,40 @@
       font-size: 16px;
       line-height: 1.6;
     }
-    .cta-button {
+    ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+    .btn-group {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .cta-button, .download-button {
       display: inline-block;
-      background-color: #25D366;
-      color: #fff;
       padding: 14px 20px;
       font-size: 18px;
-      margin-top: 20px;
       border-radius: 6px;
       text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .cta-button {
+      background-color: #25D366;
+      color: #fff;
     }
     .cta-button:hover {
       background-color: #128C7E;
+    }
+    .download-button {
+      background-color: #d10000;
+      color: #fff;
+    }
+    .download-button:hover {
+      background-color: #a00000;
     }
     footer {
       margin-top: 40px;
@@ -57,8 +79,14 @@
       text-align: left;
       margin-top: 40px;
     }
+    .faq h2 {
+      color: #d10000;
+      margin-bottom: 10px;
+    }
     .faq h3 {
       color: #d10000;
+      margin-top: 20px;
+      margin-bottom: 5px;
     }
     .whatsapp-float {
       position: fixed;
@@ -71,6 +99,7 @@
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      z-index: 9999;
     }
   </style>
 </head>
@@ -88,13 +117,23 @@
       Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br>
       Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
     </p>
-    <ul style="text-align: left;">
+    <ul>
       <li>✅ Como os falsos experts manipulam provas sociais</li>
       <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
       <li>🚀 A rota real para lucrar sem cair em ciladas</li>
     </ul>
     <p><strong>⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</strong></p>
-    <a class="cta-button" href="https://wa.me/553497968526?text=Quero+receber+o+eBook+Mentira+Milionária" target="_blank" rel="noopener noreferrer">Quero receber o eBook pelo WhatsApp</a>
+
+    <div class="btn-group">
+      <a class="cta-button" href="https://wa.me/553497968526?text=Quero+receber+o+eBook+Mentira+Milionária" target="_blank" rel="noopener noreferrer">
+        Quero receber o eBook pelo WhatsApp
+      </a>
+
+      <a class="download-button" href="ebook_mentira_milionaria.pdf" target="_blank" download>
+        Baixar o eBook Completo (PDF)
+      </a>
+    </div>
+
     <p>🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.</p>
     <p>Sem spam e sem cobranças futuras.</p>
 
