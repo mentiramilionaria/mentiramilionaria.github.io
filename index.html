@@ -273,7 +273,7 @@
         <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1btn">
           O eBook é realmente grátis?
         </button>
-        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1btn">
+        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1btn" hidden>
           Sim! O eBook é 100% gratuito para os 100 primeiros interessados.
         </div>
       </div>
@@ -282,7 +282,7 @@
         <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2btn">
           Como recebo o eBook?
         </button>
-        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2btn">
+        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2btn" hidden>
           Você receberá o eBook diretamente no WhatsApp pelo número que cadastrou.
         </div>
       </div>
@@ -291,7 +291,7 @@
         <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3btn">
           Existe alguma pegadinha?
         </button>
-        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3btn">
+        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3btn" hidden>
           Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
         </div>
       </div>
@@ -300,7 +300,7 @@
     <div class="footer">
       🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.  
       <br>
-      <a href="#" tabindex="0">Política de Privacidade</a>
+      <a href="https://mentiramilionaria.github.io/politica-de-privacidade.html" target="_blank" rel="noopener noreferrer" tabindex="0">Política de Privacidade</a>
     </div>
   </div>
 
@@ -310,16 +310,17 @@
   </a>
 
   <script>
-    // Toggle FAQ
+    // Toggle FAQ melhorado para usar atributo hidden
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
         const expanded = button.getAttribute('aria-expanded') === 'true';
+
         button.setAttribute('aria-expanded', !expanded);
         if (expanded) {
-          answer.style.display = 'none';
+          answer.hidden = true;
         } else {
-          answer.style.display = 'block';
+          answer.hidden = false;
         }
       });
     });
