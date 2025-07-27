@@ -6,6 +6,17 @@
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes.">
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png">
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-W7F8RBZX');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <style>
     body {
       background-color: #121212;
@@ -84,9 +95,74 @@
       margin-bottom: 25px;
       border-radius: 8px;
     }
+
+    /* FAQ Styles */
+    .faq {
+      margin-top: 40px;
+      background: #292929;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .faq h2 {
+      color: #00c896;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .faq-item {
+      margin-bottom: 15px;
+    }
+    .faq-question {
+      background: none;
+      border: none;
+      color: #00c896;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      width: 100%;
+      cursor: pointer;
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+    }
+    .faq-question:focus {
+      outline: 2px solid #00c896;
+      outline-offset: 2px;
+    }
+    .faq-answer {
+      color: #ddd;
+      padding-left: 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.4;
+      display: none;
+    }
+
+    /* Responsividade */
+    @media (max-width: 480px) {
+      body {
+        padding: 0 10px;
+      }
+      .container {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .btn {
+        padding: 12px;
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+
   <div class="container">
     <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg" alt="Capa do eBook Mentira Milionária">
 
@@ -108,18 +184,51 @@
     <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">Quero receber o eBook pelo WhatsApp</a>
     <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">📥 Receber eBook</a>
 
+    <!-- FAQ -->
+    <div class="faq" aria-label="Perguntas frequentes">
+      <h2>FAQ - Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1btn">O eBook é realmente grátis?</button>
+        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1btn">
+          Sim! O eBook é 100% gratuito para os 100 primeiros interessados.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2btn">Como recebo o eBook?</button>
+        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2btn">
+          Você receberá o eBook diretamente no WhatsApp pelo número que cadastrou.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3btn">Existe alguma pegadinha?</button>
+        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3btn">
+          Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
+        </div>
+      </div>
+    </div>
+
     <div class="footer">
       🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.
     </div>
   </div>
 
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-W7F8RBZX');</script>
-  <!-- End Google Tag Manager -->
-
+  <script>
+    // Toggle FAQ
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const answer = button.nextElementSibling;
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        if (answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
