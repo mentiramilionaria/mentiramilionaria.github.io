@@ -418,8 +418,6 @@
   </div>
 
   <script>
-    // Google Tag Manager - dataLayer já inserido no head
-
     // Função para abrir WhatsApp com rastreamento GTM e mostrar popup
     function openWhatsApp() {
       try {
@@ -441,18 +439,4 @@
     }
 
     // Vincular botões WhatsApp
-    ['btn-whatsapp-main', 'btn-whatsapp-secondary', 'btn-whatsapp-green', 'whatsapp-float'].forEach(id => {
-      const el = document.getElementById(id);
-      if(el){
-        el.href = "javascript:void(0)";
-        el.addEventListener('click', openWhatsApp);
-      }
-    });
-
-    // Fechar popup
-    document.getElementById('close-popup').addEventListener('click', () => {
-      document.getElementById('popup-thanks').style.display = 'none';
-    });
-
-    // Botão voltar ao topo
-    const btnTop = document.getElementById('btn-top
+    ['btn-whatsapp-main', 'btn-whatsapp-secondary', 'btn-whatsapp-green', 'whatsapp-float'].for
