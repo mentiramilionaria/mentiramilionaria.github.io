@@ -1,172 +1,125 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mentira Milionária - eBook Gratuito</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mentira Milionária</title>
+  <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes.">
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png">
   <style>
     body {
+      background-color: #121212;
+      color: white;
       font-family: Arial, sans-serif;
-      background: #fff;
-      color: #111;
       margin: 0;
-      padding: 0;
-    }
-    header {
-      text-align: center;
-      padding: 10px;
-    }
-    header img {
-      max-width: 100%;
-      height: auto;
+      padding: 0 20px;
     }
     .container {
       max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      text-align: center;
+      margin: 40px auto;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
     }
     h1 {
+      color: red;
+      text-align: center;
       font-size: 24px;
-      color: #d10000;
     }
-    p {
-      font-size: 16px;
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
       line-height: 1.6;
     }
-    .cta-button {
-      display: inline-block;
-      background-color: #25D366;
-      color: #fff;
-      padding: 14px 20px;
-      font-size: 18px;
+    ul {
       margin-top: 20px;
-      border-radius: 6px;
-      text-decoration: none;
+      padding-left: 20px;
+      line-height: 1.8;
     }
-    .cta-button:hover {
-      background-color: #128C7E;
+    ul li {
+      margin-bottom: 10px;
     }
-    footer {
-      margin-top: 50px;
+    .alerta {
+      color: #ff4c4c;
+      font-weight: bold;
+      margin: 20px 0;
       text-align: center;
-      font-size: 0.9rem;
-      color: #777;
-      padding-bottom: 15px;
-      border-top: 1px solid #333;
-      font-style: italic;
     }
-    .faq {
-      text-align: left;
-      margin-top: 40px;
-      background: #1c1c1c;
-      padding: 25px 20px;
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #00c896;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      border: none;
       border-radius: 10px;
-      box-shadow: inset 0 0 15px #d10000;
-      color: #eee;
-    }
-    .faq h2 {
-      color: #d10000;
-      font-size: 1.75rem;
-      margin-bottom: 20px;
-      text-align: center;
-      text-shadow: 0 0 5px #d10000;
-    }
-    .faq h3 {
-      color: #ff5555;
-      font-size: 1.2rem;
-      margin-top: 25px;
-      margin-bottom: 8px;
-      font-weight: 900;
-    }
-    .faq p {
-      margin: 0 0 12px 0;
-      line-height: 1.5;
-      font-size: 1rem;
-      color: #ddd;
-    }
-    a.whatsapp-float {
-      position: fixed;
-      bottom: 18px;
-      right: 18px;
-      background-color: #25D366;
-      color: #fff;
-      border-radius: 50px;
-      padding: 14px 22px;
-      font-weight: 900;
-      font-size: 1.3rem;
+      margin-top: 15px;
+      cursor: pointer;
       text-decoration: none;
-      box-shadow: 0 8px 18px rgba(37, 211, 102, 0.8);
-      transition: background-color 0.3s ease, box-shadow 0.3s ease;
-      z-index: 99999;
+      transition: background-color 0.3s;
     }
-    a.whatsapp-float:hover,
-    a.whatsapp-float:focus {
-      background-color: #128C7E;
-      box-shadow: 0 12px 28px rgba(18, 140, 126, 1);
-      outline: none;
+    .btn:hover {
+      background-color: #00a87d;
     }
-    @media (max-width: 768px) {
-      .container {
-        margin: 15px 10px;
-        padding: 20px 15px;
-      }
-      h1 {
-        font-size: 1.6rem;
-      }
-      a.cta-button {
-        font-size: 1.1rem;
-        padding: 15px 20px;
-      }
-      ul li {
-        font-size: 1rem;
-      }
+    .btn.green {
+      background-color: #28a745;
+    }
+    .btn.green:hover {
+      background-color: #218838;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 25px;
+    }
+    .footer i {
+      margin-right: 5px;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 25px;
+      border-radius: 8px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://cdn.openai.com/chatgpt/landing-pages/mentira-milionaria-topo.jpg" alt="Mentira Milionária Capa">
-  </header>  <main class="container">
+  <div class="container">
+    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg" alt="Capa do eBook Mentira Milionária">
+
     <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
-    <p>
-      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br>
+
+    <div class="intro">
+      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br><br>
       Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
-    </p>
-    <ul style="text-align: left;">
-      <li>✅ Como os falsos experts manipulam provas sociais</li>
-      <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
-      <li>🚀 A rota real para lucrar sem cair em ciladas</li>
+    </div>
+
+    <ul>
+      <li>✅ <strong>Como os falsos experts manipulam provas sociais</strong></li>
+      <li>⚠️ <strong>As armadilhas que fazem você perder tempo e dinheiro</strong></li>
+      <li>🚀 <strong>A rota real para lucrar sem cair em ciladas</strong></li>
     </ul>
-    <p><strong>⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</strong></p>
-    <a class="cta-button" href="https://wa.me/553497968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria" target="_blank" rel="noopener noreferrer" aria-label="Quero receber o eBook Mentira Milionária pelo WhatsApp">
-      Quero receber o eBook pelo WhatsApp
-    </a>
-    <p class="info-text">🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.</p>
-    <p class="info-text">Sem spam e sem cobranças futuras.</p><section class="faq" aria-label="Perguntas frequentes sobre o eBook Mentira Milionária">
-  <h2>Perguntas Frequentes (FAQ)</h2>
-  <h3>📘 O eBook é realmente gratuito?</h3>
-  <p>Sim! O eBook Mentira Milionária é 100% gratuito para os primeiros 100 inscritos.</p>
 
-  <h3>📲 Como vou receber o eBook?</h3>
-  <p>Após clicar no botão, você receberá uma mensagem automática pelo WhatsApp com o link para download.</p>
+    <p class="alerta">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
 
-  <h3>🔗 Posso compartilhar o eBook com outras pessoas?</h3>
-  <p>Claro! O conhecimento é para todos, mas lembre-se que a oferta gratuita é limitada.</p>
+    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">Quero receber o eBook pelo WhatsApp</a>
+    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">📥 Receber eBook</a>
 
-  <h3>💰 Preciso pagar algo depois?</h3>
-  <p>Não. O eBook é totalmente gratuito, sem cobranças futuras.</p>
+    <div class="footer">
+      🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.
+    </div>
+  </div>
 
-  <h3>✅ O conteúdo é confiável?</h3>
-  <p>Sim! O conteúdo foi elaborado com base em pesquisas profundas para revelar os bastidores do marketing digital.</p>
-</section>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W7F8RBZX');</script>
+  <!-- End Google Tag Manager -->
 
-<footer>
-  &copy; 2025 Mentira Milionária. Todos os direitos reservados.
-</footer>
-
-  </main>  <a href="https://wa.me/553497968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Receber o eBook Mentira Milionária pelo WhatsApp">
-    📥 Receber eBook
-  </a>
 </body>
 </html>
