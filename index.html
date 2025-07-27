@@ -40,6 +40,11 @@
       margin: 0;
       padding: 0 20px;
       scroll-behavior: smooth;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {opacity: 1;}
     }
     .container {
       max-width: 600px;
@@ -122,6 +127,7 @@
       height: auto;
       margin-bottom: 25px;
       border-radius: 8px;
+      loading: lazy;
     }
 
     /* FAQ Styles */
@@ -220,10 +226,91 @@
       height: 36px;
     }
 
-    /* CTA extra */
-    .btn-middle {
-      margin-top: 25px;
-      margin-bottom: 25px;
+    /* Botão voltar ao topo */
+    #btn-top {
+      position: fixed;
+      bottom: 80px;
+      right: 25px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Formulário de backup */
+    #form-backup {
+      display: none;
+      margin-top: 20px;
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    #form-backup input[type="text"],
+    #form-backup input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    #form-backup button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #00c896;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    #form-backup button:hover {
+      background-color: #00a87d;
+    }
+
+    /* Popup agradecimento */
+    #popup-thanks {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    #popup-thanks .content {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      color: white;
+      max-width: 400px;
+      text-align: center;
+    }
+    #popup-thanks button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      background: #25D366;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    #popup-thanks button:hover {
+      background-color: #128C7E;
     }
   </style>
 </head>
@@ -235,8 +322,8 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
-  <div class="container">
-    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg" alt="Capa do eBook Mentira Milionária" width="600" height="auto">
+  <div class="container fade-in">
+    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" width="600" height="auto">
 
     <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
 
@@ -246,7 +333,7 @@
     </div>
 
     <!-- CTA extra no meio -->
-    <a class="btn btn-middle" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp">
+    <a class="btn btn-middle" id="btn-whatsapp-main" href="#" aria-label="Receber eBook pelo WhatsApp">
       Quero receber o eBook pelo WhatsApp
     </a>
 
@@ -258,12 +345,21 @@
 
     <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
 
-    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp">
+    <a class="btn" id="btn-whatsapp-secondary" href="#" aria-label="Receber eBook pelo WhatsApp">
       Quero receber o eBook pelo WhatsApp
     </a>
-    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp - botão verde">
+    <a class="btn green" id="btn-whatsapp-green" href="#" aria-label="Receber eBook pelo WhatsApp - botão verde">
       📥 Receber eBook
     </a>
+
+    <!-- Formulário de Backup -->
+    <div id="form-backup" aria-label="Formulário de backup caso o WhatsApp não funcione">
+      <p>Se o botão acima não funcionar, deixe seu nome e e-mail abaixo para receber o eBook:</p>
+      <input type="text" id="backup-name" placeholder="Seu nome" aria-label="Seu nome" />
+      <input type="email" id="backup-email" placeholder="Seu melhor e-mail" aria-label="Seu e-mail" />
+      <button id="backup-submit">Quero receber o eBook</button>
+      <p id="backup-message" style="color:#00c896; margin-top:10px; display:none;">Mensagem enviada com sucesso! Aguarde nosso contato.</p>
+    </div>
 
     <!-- FAQ -->
     <div class="faq" aria-label="Perguntas frequentes">
@@ -305,26 +401,58 @@
   </div>
 
   <!-- Botão WhatsApp flutuante -->
-  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" target="_blank" id="whatsapp-float" aria-label="Contato WhatsApp">
+  <a href="#" id="whatsapp-float" aria-label="Contato WhatsApp" tabindex="0">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
   </a>
 
+  <!-- Botão voltar ao topo -->
+  <button id="btn-top" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Popup agradecimento -->
+  <div id="popup-thanks" role="dialog" aria-modal="true" aria-labelledby="popup-title" aria-describedby="popup-desc">
+    <div class="content">
+      <h2 id="popup-title">✅ Mensagem enviada!</h2>
+      <p id="popup-desc">Verifique seu WhatsApp. Qualquer problema, use o formulário abaixo.</p>
+      <button id="close-popup">Fechar</button>
+    </div>
+  </div>
+
   <script>
-    // Toggle FAQ melhorado para usar atributo hidden
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const answer = button.nextElementSibling;
-        const expanded = button.getAttribute('aria-expanded') === 'true';
+    // Google Tag Manager - dataLayer já inserido no head
 
-        button.setAttribute('aria-expanded', !expanded);
-        if (expanded) {
-          answer.hidden = true;
-        } else {
-          answer.hidden = false;
-        }
-      });
+    // Função para abrir WhatsApp com rastreamento GTM e mostrar popup
+    function openWhatsApp() {
+      try {
+        dataLayer.push({ event: 'whatsapp_click' });
+      } catch(e) {
+        // dataLayer pode não existir se GTM não carregou
+      }
+
+      const waLink = "https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis";
+      window.open(waLink, '_blank');
+
+      // Mostrar popup agradecimento
+      document.getElementById('popup-thanks').style.display = 'flex';
+
+      // Mostrar formulário backup após 5 segundos
+      setTimeout(() => {
+        document.getElementById('form-backup').style.display = 'block';
+      }, 5000);
+    }
+
+    // Vincular botões WhatsApp
+    ['btn-whatsapp-main', 'btn-whatsapp-secondary', 'btn-whatsapp-green', 'whatsapp-float'].forEach(id => {
+      const el = document.getElementById(id);
+      if(el){
+        el.href = "javascript:void(0)";
+        el.addEventListener('click', openWhatsApp);
+      }
     });
-  </script>
 
-</body>
-</html>
+    // Fechar popup
+    document.getElementById('close-popup').addEventListener('click', () => {
+      document.getElementById('popup-thanks').style.display = 'none';
+    });
+
+    // Botão voltar ao topo
+    const btnTop = document.getElementById('btn-top
