@@ -246,7 +246,7 @@
     </div>
 
     <!-- CTA extra no meio -->
-    <a class="btn btn-middle" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp">
+    <a class="btn btn-middle" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp">
       Quero receber o eBook pelo WhatsApp
     </a>
 
@@ -258,10 +258,10 @@
 
     <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
 
-    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp">
+    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp">
       Quero receber o eBook pelo WhatsApp
     </a>
-    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp - botão verde">
+    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" aria-label="Receber eBook pelo WhatsApp - botão verde">
       📥 Receber eBook
     </a>
 
@@ -305,7 +305,7 @@
   </div>
 
   <!-- Botão WhatsApp flutuante -->
-  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" target="_blank" id="whatsapp-float" aria-label="Contato WhatsApp">
+  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" target="_blank" id="whatsapp-float" aria-label="Contato WhatsApp">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
   </a>
 
@@ -315,4 +315,15 @@
       button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
         const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded',
+        button.setAttribute('aria-expanded', !expanded);
+        if (expanded) {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
