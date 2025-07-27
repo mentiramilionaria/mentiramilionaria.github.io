@@ -5,7 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes.">
+
+  <!-- SEO Avançado: Open Graph e Twitter Cards -->
+  <meta property="og:title" content="Mentira Milionária - Ebook Grátis"/>
+  <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes."/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg"/>
+  <meta property="og:url" content="https://mentiramilionaria.github.io/"/>
+  <meta property="og:type" content="website"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Mentira Milionária - Ebook Grátis"/>
+  <meta name="twitter:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes."/>
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg"/>
+
+  <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png">
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon">
 
   <!-- Google Tag Manager -->
   <script>
@@ -24,6 +39,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 20px;
+      scroll-behavior: smooth;
     }
     .container {
       max-width: 600px;
@@ -37,6 +53,7 @@
       color: red;
       text-align: center;
       font-size: 24px;
+      margin-bottom: 20px;
     }
     .intro {
       text-align: center;
@@ -72,14 +89,18 @@
       text-decoration: none;
       transition: background-color 0.3s;
     }
-    .btn:hover {
+    .btn:hover,
+    .btn:focus {
       background-color: #00a87d;
+      outline: none;
     }
     .btn.green {
       background-color: #28a745;
     }
-    .btn.green:hover {
+    .btn.green:hover,
+    .btn.green:focus {
       background-color: #218838;
+      outline: none;
     }
     .footer {
       text-align: center;
@@ -87,11 +108,18 @@
       color: #aaa;
       margin-top: 25px;
     }
-    .footer i {
-      margin-right: 5px;
+    .footer a {
+      color: #00c896;
+      text-decoration: none;
+    }
+    .footer a:hover,
+    .footer a:focus {
+      text-decoration: underline;
+      outline: none;
     }
     img {
       width: 100%;
+      height: auto;
       margin-bottom: 25px;
       border-radius: 8px;
     }
@@ -152,6 +180,50 @@
         padding: 12px;
         font-size: 14px;
       }
+      /* WhatsApp flutuante tamanho menor em celular */
+      #whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+      #whatsapp-float img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    /* Botão WhatsApp Flutuante */
+    #whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 1000;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    #whatsapp-float:hover,
+    #whatsapp-float:focus {
+      background-color: #1ebe57;
+      outline: none;
+    }
+    #whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* CTA extra */
+    .btn-middle {
+      margin-top: 25px;
+      margin-bottom: 25px;
     }
   </style>
 </head>
@@ -164,7 +236,7 @@
   </noscript>
 
   <div class="container">
-    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg" alt="Capa do eBook Mentira Milionária">
+    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.jpg" alt="Capa do eBook Mentira Milionária" width="600" height="auto">
 
     <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
 
@@ -173,37 +245,52 @@
       Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
     </div>
 
+    <!-- CTA extra no meio -->
+    <a class="btn btn-middle" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp">
+      Quero receber o eBook pelo WhatsApp
+    </a>
+
     <ul>
       <li>✅ <strong>Como os falsos experts manipulam provas sociais</strong></li>
       <li>⚠️ <strong>As armadilhas que fazem você perder tempo e dinheiro</strong></li>
       <li>🚀 <strong>A rota real para lucrar sem cair em ciladas</strong></li>
     </ul>
 
-    <p class="alerta">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
+    <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
 
-    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">Quero receber o eBook pelo WhatsApp</a>
-    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis">📥 Receber eBook</a>
+    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp">
+      Quero receber o eBook pelo WhatsApp
+    </a>
+    <a class="btn green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" aria-label="Receber eBook pelo WhatsApp - botão verde">
+      📥 Receber eBook
+    </a>
 
     <!-- FAQ -->
     <div class="faq" aria-label="Perguntas frequentes">
       <h2>FAQ - Perguntas Frequentes</h2>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1btn">O eBook é realmente grátis?</button>
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1btn">
+          O eBook é realmente grátis?
+        </button>
         <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1btn">
           Sim! O eBook é 100% gratuito para os 100 primeiros interessados.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2btn">Como recebo o eBook?</button>
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2btn">
+          Como recebo o eBook?
+        </button>
         <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2btn">
           Você receberá o eBook diretamente no WhatsApp pelo número que cadastrou.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3btn">Existe alguma pegadinha?</button>
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3btn">
+          Existe alguma pegadinha?
+        </button>
         <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3btn">
           Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
         </div>
@@ -211,9 +298,16 @@
     </div>
 
     <div class="footer">
-      🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.
+      🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.  
+      <br>
+      <a href="#" tabindex="0">Política de Privacidade</a>
     </div>
   </div>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis" target="_blank" id="whatsapp-float" aria-label="Contato WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+  </a>
 
   <script>
     // Toggle FAQ
@@ -221,14 +315,4 @@
       button.addEventListener('click', () => {
         const answer = button.nextElementSibling;
         const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        if (answer.style.display === 'block') {
-          answer.style.display = 'none';
-        } else {
-          answer.style.display = 'block';
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+        button.setAttribute('aria-expanded',
