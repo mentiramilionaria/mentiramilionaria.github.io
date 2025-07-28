@@ -229,6 +229,7 @@
       aria-expanded="false"
       aria-controls="form-backup"
       aria-label="Mostrar formulário para receber eBook por e-mail se o WhatsApp não funcionar"
+      type="button"
     >
       ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
     </button>
@@ -252,4 +253,86 @@
       <input
         type="email"
         name="email"
-        placeholder="Seu melhor e-mail
+        placeholder="Seu melhor e-mail"
+        required
+        autocomplete="email"
+        aria-required="true"
+        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
+      />
+      <input type="hidden" name="_subject" value="Solicitação do eBook Mentira Milionária" />
+      <input type="hidden" name="_captcha" value="false" />
+      <button
+        type="submit"
+        class="btn green"
+        aria-label="Enviar formulário para receber eBook por e-mail"
+      >
+        Enviar
+      </button>
+    </form>
+
+    <!-- FAQ Section -->
+    <section class="faq" aria-label="Perguntas frequentes">
+      <h2>Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">
+          Como recebo o eBook pelo WhatsApp?
+        </button>
+        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-btn">
+          Clique no botão verde “Quero receber o eBook pelo WhatsApp” para abrir o WhatsApp com a mensagem pronta. Você receberá o link direto para download.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-btn">
+          E se o WhatsApp não funcionar?
+        </button>
+        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-btn">
+          Use o botão “⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail” e preencha o formulário para receber o eBook diretamente no seu e-mail.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-btn">
+          O download é realmente gratuito?
+        </button>
+        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-btn">
+          Sim, o acesso é 100% gratuito e liberado apenas para os 100 primeiros interessados.
+        </div>
+      </div>
+
+    </section>
+
+    <div class="footer">
+      <p>© 2025 Mentira Milionária. Todos os direitos reservados.</p>
+    </div>
+
+  </div>
+
+  <script>
+    // Toggle form backup visibility
+    const btnBackup = document.getElementById('btn-open-backup');
+    const formBackup = document.getElementById('form-backup');
+
+    btnBackup.addEventListener('click', () => {
+      const isVisible = formBackup.style.display === 'block';
+      formBackup.style.display = isVisible ? 'none' : 'block';
+      btnBackup.setAttribute('aria-expanded', !isVisible);
+    });
+
+    // FAQ accordion toggle
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const answer = document.getElementById(button.getAttribute('aria-controls'));
+        if (answer) {
+          answer.style.display = expanded ? 'none' : 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
