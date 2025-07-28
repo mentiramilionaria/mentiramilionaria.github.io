@@ -38,7 +38,6 @@
   <!-- End Google Tag Manager -->
 
   <style>
-    /* ====== Estilo Completo ====== */
     body {
       background-color: #121212;
       color: white;
@@ -50,9 +49,7 @@
       animation: fadeIn 1.2s ease forwards;
     }
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
     .container {
       max-width: 600px;
@@ -193,7 +190,6 @@
         padding: 12px;
         font-size: 14px;
       }
-      /* WhatsApp flutuante tamanho menor em celular */
       #whatsapp-float {
         width: 50px;
         height: 50px;
@@ -206,7 +202,6 @@
       }
     }
 
-    /* Botão WhatsApp Flutuante */
     #whatsapp-float {
       position: fixed;
       width: 60px;
@@ -233,7 +228,6 @@
       height: 36px;
     }
 
-    /* Botão voltar ao topo */
     #btn-top {
       position: fixed;
       bottom: 80px;
@@ -252,7 +246,6 @@
       justify-content: center;
     }
 
-    /* Formulário de backup */
     #form-backup {
       display: none;
       margin-top: 20px;
@@ -288,7 +281,6 @@
       background-color: #00a87d;
     }
 
-    /* Popup agradecimento */
     #popup-thanks {
       position: fixed;
       top: 0;
@@ -324,17 +316,57 @@
       background-color: #128c7e;
     }
 
+    #formulario {
+      text-align: center;
+      margin: 50px auto 80px;
+      max-width: 600px;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #formulario h2 {
+      margin-bottom: 15px;
+      color: #00c896;
+    }
+    #formulario p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    #formulario input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+    #formulario button[type="submit"] {
+      background-color: #00c851;
+      color: white;
+      padding: 15px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    #formulario button[type="submit"]:hover,
+    #formulario button[type="submit"]:focus {
+      background-color: #018f43;
+      outline: none;
+    }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
   </noscript>
 
   <div class="container" role="main">
@@ -490,64 +522,3 @@
           aria-expanded="false"
           aria-controls="faq3"
           id="faq3btn"
-        >
-          Existe alguma pegadinha?
-        </button>
-        <div
-          class="faq-answer"
-          id="faq3"
-          role="region"
-          aria-labelledby="faq3btn"
-          hidden
-        >
-          Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      🔒 100% gratuito, seus dados estão seguros. Criado por Washington L R Junior.
-    </div>
-  </div>
-
-  <!-- Script para FAQ e formulário backup -->
-  <script>
-    // Toggle FAQ answers
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        const answer = document.getElementById(button.getAttribute('aria-controls'));
-        if (answer) {
-          if (!expanded) {
-            answer.style.display = 'block';
-            answer.hidden = false;
-          } else {
-            answer.style.display = 'none';
-            answer.hidden = true;
-          }
-        }
-<!-- Botão alternativo por e-mail -->
-<p style="margin-top: 10px; text-align: center;">
-  ⚠️ Se o WhatsApp não funcionar,
-  <a href="#formulario" style="color: #00ffae; text-decoration: underline;">clique aqui para receber por e-mail</a>
-</p>
-
-<!-- Seção FAQ -->
-<section id="faq" style="margin-top: 50px;">
-  <h2 style="text-align: center; color: white;">FAQ - Perguntas Frequentes</h2>
-  <div style="max-width: 600px; margin: 20px auto;">
-    <details style="background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-      <summary style="cursor: pointer; color: #00ffae;">O eBook é realmente grátis?</summary>
-      <p style="color: white;">Sim! O download é 100% gratuito, sem pegadinhas. Basta clicar no botão de WhatsApp ou preencher o formulário.</p>
-    </details>
-    <details style="background: #111; padding: 15px; border-radius: 10px; margin-bottom: 10px;">
-      <summary style="cursor: pointer; color: #00ffae;">Como recebo o eBook?</summary>
-      <p style="color: white;">Assim que você clicar no botão ou preencher seu e-mail, o eBook será enviado diretamente para seu WhatsApp ou e-mail.</p>
-    </details>
-    <details style="background: #111; padding: 15px; border-radius: 10px;">
-      <summary style="cursor: pointer; color: #00ffae;">Existe alguma pegadinha?</summary>
-      <p style="color: white;">Não. Esse conteúdo foi criado para revelar a verdade sobre o marketing digital, sem custos e com total transparência.</p>
-    </details>
-  </div>
-</section>
