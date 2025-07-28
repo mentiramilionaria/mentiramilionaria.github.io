@@ -49,7 +49,9 @@
       animation: fadeIn 1.2s ease forwards;
     }
     @keyframes fadeIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
     .container {
       max-width: 600px;
@@ -99,14 +101,16 @@
       text-decoration: none;
       transition: background-color 0.3s;
     }
-    .btn:hover, .btn:focus {
+    .btn:hover,
+    .btn:focus {
       background-color: #00a87d;
       outline: none;
     }
     .btn.green {
       background-color: #28a745;
     }
-    .btn.green:hover, .btn.green:focus {
+    .btn.green:hover,
+    .btn.green:focus {
       background-color: #218838;
       outline: none;
     }
@@ -120,7 +124,8 @@
       color: #00c896;
       text-decoration: none;
     }
-    .footer a:hover, .footer a:focus {
+    .footer a:hover,
+    .footer a:focus {
       text-decoration: underline;
       outline: none;
     }
@@ -185,6 +190,7 @@
         padding: 12px;
         font-size: 14px;
       }
+      /* WhatsApp flutuante tamanho menor em celular */
       #whatsapp-float {
         width: 50px;
         height: 50px;
@@ -205,7 +211,7 @@
       right: 25px;
       background-color: #25d366;
       border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
       z-index: 1000;
       cursor: pointer;
       display: flex;
@@ -213,7 +219,8 @@
       align-items: center;
       transition: background-color 0.3s;
     }
-    #whatsapp-float:hover, #whatsapp-float:focus {
+    #whatsapp-float:hover,
+    #whatsapp-float:focus {
       background-color: #1ebe57;
       outline: none;
     }
@@ -281,7 +288,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0,0,0,0.85);
+      background: rgba(0, 0, 0, 0.85);
       display: none;
       align-items: center;
       justify-content: center;
@@ -309,16 +316,74 @@
     #popup-thanks button:hover {
       background-color: #128c7e;
     }
+    /* Formulário de envio extra por e-mail (formsubmit.co) */
+    #formulario {
+      text-align: center;
+      margin: 50px auto 80px;
+      max-width: 600px;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #formulario h2 {
+      margin-bottom: 15px;
+      color: #00c896;
+    }
+    #formulario p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    #formulario input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+    #formulario button[type="submit"] {
+      background-color: #00c851;
+      color: white;
+      padding: 15px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    #formulario button[type="submit"]:hover,
+    #formulario button[type="submit"]:focus {
+      background-color: #018f43;
+      outline: none;
+    }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe>
   </noscript>
 
   <div class="container" role="main">
-    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" style="border-radius: 8px; margin-bottom: 25px" />
+    <img
+      src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp"
+      alt="Capa do eBook Mentira Milionária"
+      loading="lazy"
+      width="600"
+      height="auto"
+      style="border-radius: 8px; margin-bottom: 25px"
+    />
 
     <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
 
@@ -329,9 +394,10 @@
       99% das promessas são mentiras disfarçadas de sucesso.
     </div>
 
-    <!-- CTA Principal -->
+    <!-- CTA extra no meio -->
     <a
       class="btn btn-middle"
+      id="btn-whatsapp-main"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis"
       target="_blank"
       rel="noopener noreferrer"
@@ -352,6 +418,7 @@
 
     <a
       class="btn"
+      id="btn-whatsapp-secondary"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis"
       target="_blank"
       rel="noopener noreferrer"
@@ -361,6 +428,7 @@
     >
     <a
       class="btn green"
+      id="btn-whatsapp-green"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis"
       target="_blank"
       rel="noopener noreferrer"
@@ -384,7 +452,6 @@
     <div
       id="form-backup"
       aria-label="Formulário de backup caso o WhatsApp não funcione"
-      style="display:none;"
     >
       <p>Deixe seu nome e e-mail para receber o eBook diretamente no seu e-mail:</p>
       <input
@@ -407,7 +474,7 @@
         style="color:#00c896; margin-top:10px; display:none"
         role="alert"
       >
-        Mensagem enviada com sucesso! Aguarde nosso contato.
+        Mensagem enviada com sucesso! Verifique seu e-mail.
       </p>
     </div>
 
@@ -421,7 +488,6 @@
           aria-expanded="false"
           aria-controls="faq1"
           id="faq1btn"
-          type="button"
         >
           O eBook é realmente grátis?
         </button>
@@ -442,7 +508,6 @@
           aria-expanded="false"
           aria-controls="faq2"
           id="faq2btn"
-          type="button"
         >
           Como recebo o eBook?
         </button>
@@ -463,63 +528,8 @@
           aria-expanded="false"
           aria-controls="faq3"
           id="faq3btn"
-          type="button"
         >
           Existe alguma pegadinha?
         </button>
         <div
-          class="faq-answer"
-          id="faq3"
-          role="region"
-          aria-labelledby="faq3btn"
-          hidden
-        >
-          Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      🔒 100% gratuito, seus dados são protegidos e não serão compartilhados.
-    </div>
-  </div>
-
-  <script>
-    // Ativar abrir/fechar FAQ
-    document.querySelectorAll('.faq-question').forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        const answer = document.getElementById(button.getAttribute('aria-controls'));
-        if (answer) {
-          if (expanded) {
-            answer.hidden = true;
-          } else {
-            answer.hidden = false;
-          }
-        }
-      });
-    });
-
-    // Mostrar/esconder formulário backup e-mail
-    const btnBackup = document.getElementById('btn-open-backup');
-    const formBackup = document.getElementById('form-backup');
-    btnBackup.addEventListener('click', () => {
-      const expanded = btnBackup.getAttribute('aria-expanded') === 'true';
-      btnBackup.setAttribute('aria-expanded', !expanded);
-      formBackup.style.display = expanded ? 'none' : 'block';
-    });
-
-    // Enviar dados do formulário backup via formsubmit.co
-    document.getElementById('backup-submit').addEventListener('click', () => {
-      const name = document.getElementById('backup-name').value.trim();
-      const email = document.getElementById('backup-email').value.trim();
-      if (!name || !email) {
-        alert('Por favor, preencha nome e e-mail corretamente.');
-        return;
-      }
-      // Montar form data para enviar
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('email', email);
-      // Substitua
+          class
