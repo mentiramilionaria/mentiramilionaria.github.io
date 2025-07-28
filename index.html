@@ -6,7 +6,7 @@
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
 
-  <!-- SEO Avançado: Open Graph e Twitter Cards -->
+  <!-- SEO Open Graph -->
   <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
   <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
   <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
@@ -21,21 +21,6 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
-  </script>
-  <!-- End Google Tag Manager -->
 
   <style>
     body {
@@ -297,57 +282,9 @@
     #popup-thanks button:hover {
       background-color: #128c7e;
     }
-    /* Formulário envio e-mail (formsubmit.co) */
-    #formulario {
-      text-align: center;
-      margin: 50px auto 80px;
-      max-width: 600px;
-      background: #1e1e1e;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    #formulario h2 {
-      margin-bottom: 15px;
-      color: #00c896;
-    }
-    #formulario p {
-      margin-bottom: 25px;
-      font-size: 16px;
-    }
-    #formulario input[type="email"] {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      border: 1px solid #555;
-      background-color: #333;
-      color: white;
-      font-size: 16px;
-    }
-    #formulario button[type="submit"] {
-      background-color: #00c851;
-      color: white;
-      padding: 15px 0;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      width: 100%;
-      transition: background-color 0.3s ease;
-    }
-    #formulario button[type="submit"]:hover,
-    #formulario button[type="submit"]:focus {
-      background-color: #018f43;
-      outline: none;
-    }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="container" role="main">
     <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" style="border-radius: 8px; margin-bottom: 25px" />
@@ -382,6 +319,102 @@
       ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
     </button>
 
-    <div id="form-backup" aria-label="Formulário de backup caso o WhatsApp não funcione">
+    <div id="form-backup" aria-label="Formulário de backup caso o WhatsApp não funcione" role="region" aria-hidden="true">
       <p>Deixe seu nome e e-mail para receber o eBook diretamente no seu e-mail:</p>
-      <input type="text" id="backup-name" placeholder="
+      <form action="https://formsubmit.co/mentiramilionariaoficial@gmail.com" method="POST" id="backup-form">
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="name" id="backup-name" placeholder="Seu nome completo" required autocomplete="name" />
+        <input type="email" name="email" id="backup-email" placeholder="Seu melhor e-mail" required autocomplete="email" />
+        <button type="submit" aria-label="Enviar formulário para receber eBook por e-mail">Enviar</button>
+      </form>
+    </div>
+
+    <!-- Link download direto -->
+    <p style="margin-top: 25px; text-align: center;">
+      📥 Baixe o eBook Mentira Milionária diretamente no Google Drive: <br />
+      <a href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view?usp=sharing" target="_blank" rel="noopener noreferrer" style="color: #00c896; font-weight: bold;">
+        Clique aqui para baixar o PDF
+      </a>
+    </p>
+
+    <section class="faq" aria-label="Perguntas frequentes">
+      <h2>FAQ - Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">O eBook é realmente grátis?</button>
+        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-btn">
+          Sim! O eBook Mentira Milionária é 100% gratuito e você não paga nada para receber.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-btn">Como recebo o eBook?</button>
+        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-btn">
+          Você pode receber pelo WhatsApp clicando nos botões verdes, ou pelo e-mail preenchendo o formulário acima caso o WhatsApp não funcione.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-btn">Existe alguma pegadinha?</button>
+        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-btn">
+          Nenhuma pegadinha! Nosso objetivo é ajudar você a enxergar a verdade por trás das falsas promessas do marketing digital.
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Botão WhatsApp flutuante -->
+  <a href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" id="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp para receber eBook">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" />
+  </a>
+
+  <!-- Botão voltar ao topo -->
+  <button id="btn-top" aria-label="Voltar ao topo" title="Voltar ao topo">&#8679;</button>
+
+  <script>
+    // Fade-in body
+    document.body.style.opacity = '1';
+
+    // Mostrar botão voltar ao topo ao rolar
+    const btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 300) btnTop.style.display = 'flex';
+      else btnTop.style.display = 'none';
+    });
+    btnTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    // Toggle formulário backup
+    const btnBackup = document.getElementById('btn-open-backup');
+    const formBackup = document.getElementById('form-backup');
+    btnBackup.addEventListener('click', () => {
+      const expanded = btnBackup.getAttribute('aria-expanded') === 'true';
+      btnBackup.setAttribute('aria-expanded', !expanded);
+      if(formBackup.style.display === 'block') {
+        formBackup.style.display = 'none';
+        formBackup.setAttribute('aria-hidden', 'true');
+      } else {
+        formBackup.style.display = 'block';
+        formBackup.setAttribute('aria-hidden', 'false');
+        document.getElementById('backup-name').focus();
+      }
+    });
+
+    // FAQ toggle
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if(answer.style.display === 'block') {
+          answer.style.display = 'none';
+        } else {
+          answer.style.display = 'block';
+        }
+      });
+    });
+
+    // Form submit with popup thanks
+    const form = document.getElementById('backup-form');
+    const popupThanks = document.createElement('div');
+    popupThanks.id = 'popup-thanks';
