@@ -539,3 +539,81 @@
         rel="noopener noreferrer"
         tabindex="0"
         >Política de Priv
+        <div class="footer">
+  🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros. <br />
+  <a
+    href="https://mentiramilionaria.github.io/politica-de-privacidade.html"
+    target="_blank"
+    rel="noopener noreferrer"
+    tabindex="0"
+    >Política de Privacidade</a
+  >
+</div>
+
+<!-- Botão WhatsApp Flutuante -->
+<a
+  id="whatsapp-float"
+  href="https://wa.me/5534997968526"
+  target="_blank"
+  aria-label="Enviar mensagem pelo WhatsApp"
+  rel="noopener noreferrer"
+>
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
+<!-- Botão voltar ao topo -->
+<button id="btn-top" aria-label="Voltar ao topo">↑</button>
+
+<script>
+  // FAQ toggle
+  const faqButtons = document.querySelectorAll(".faq-question");
+  faqButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", !expanded);
+      const answer = document.getElementById(btn.getAttribute("aria-controls"));
+      if (answer) {
+        if (expanded) {
+          answer.style.display = "none";
+          answer.setAttribute("hidden", "");
+        } else {
+          answer.style.display = "block";
+          answer.removeAttribute("hidden");
+        }
+      }
+    });
+  });
+
+  // Mostrar formulário backup se WhatsApp falhar (exemplo simples)
+  const backupBtn = document.getElementById("backup-submit");
+  const formBackup = document.getElementById("form-backup");
+  const backupMessage = document.getElementById("backup-message");
+
+  backupBtn.addEventListener("click", () => {
+    const name = document.getElementById("backup-name").value.trim();
+    const email = document.getElementById("backup-email").value.trim();
+    if (name && email) {
+      // Simulação de envio, aqui você pode integrar API real
+      backupMessage.style.display = "block";
+      formBackup.style.display = "none";
+    } else {
+      alert("Por favor, preencha nome e e-mail.");
+    }
+  });
+
+  // Botão voltar ao topo
+  const btnTop = document.getElementById("btn-top");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 200) {
+      btnTop.style.display = "flex";
+    } else {
+      btnTop.style.display = "none";
+    }
+  });
+  btnTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+</body>
+      </html>
