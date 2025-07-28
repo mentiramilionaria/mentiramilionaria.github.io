@@ -22,14 +22,37 @@
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
 
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
+  </script>
+  <!-- End Google Tag Manager -->
+
   <style>
+    /* ====== Estilo Completo ====== */
     body {
       background-color: #121212;
       color: white;
       font-family: Arial, sans-serif;
       margin: 0;
-      padding: 20px;
+      padding: 0 20px;
       scroll-behavior: smooth;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
     }
     .container {
       max-width: 600px;
@@ -154,6 +177,81 @@
       display: none;
     }
 
+    /* Responsividade */
+    @media (max-width: 480px) {
+      body {
+        padding: 0 10px;
+      }
+      .container {
+        margin: 20px 10px;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 20px;
+      }
+      .btn {
+        padding: 12px;
+        font-size: 14px;
+      }
+      /* WhatsApp flutuante tamanho menor em celular */
+      #whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+      }
+      #whatsapp-float img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
+    /* Botão WhatsApp Flutuante */
+    #whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    #whatsapp-float:hover,
+    #whatsapp-float:focus {
+      background-color: #1ebe57;
+      outline: none;
+    }
+    #whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+
+    /* Botão voltar ao topo */
+    #btn-top {
+      position: fixed;
+      bottom: 80px;
+      right: 25px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+
     /* Formulário de backup */
     #form-backup {
       display: none;
@@ -190,26 +288,55 @@
       background-color: #00a87d;
     }
 
-    /* Responsividade */
-    @media (max-width: 480px) {
-      body {
-        padding: 10px;
-      }
-      .container {
-        margin: 20px 10px;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .btn {
-        padding: 12px;
-        font-size: 14px;
-      }
+    /* Popup agradecimento */
+    #popup-thanks {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
     }
+    #popup-thanks .content {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      color: white;
+      max-width: 400px;
+      text-align: center;
+    }
+    #popup-thanks button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      background: #25d366;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    #popup-thanks button:hover {
+      background-color: #128c7e;
+    }
+
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
+      height="0"
+      width="0"
+      style="display: none; visibility: hidden"
+    ></iframe>
+  </noscript>
+
   <div class="container" role="main">
     <img
       src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp"
@@ -229,9 +356,10 @@
       99% das promessas são mentiras disfarçadas de sucesso.
     </div>
 
-    <!-- Botão WhatsApp com mensagem personalizada -->
+    <!-- CTA extra no meio -->
     <a
       class="btn btn-middle"
+      id="btn-whatsapp-main"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
       target="_blank"
       rel="noopener noreferrer"
@@ -250,9 +378,9 @@
       ⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.
     </p>
 
-    <!-- Botão principal WhatsApp -->
     <a
       class="btn"
+      id="btn-whatsapp-secondary"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
       target="_blank"
       rel="noopener noreferrer"
@@ -262,6 +390,7 @@
     >
     <a
       class="btn green"
+      id="btn-whatsapp-green"
       href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
       target="_blank"
       rel="noopener noreferrer"
@@ -270,7 +399,7 @@
       >📥 Receber eBook</a
     >
 
-    <!-- Botão que abre formulário backup -->
+    <!-- Botão para abrir formulário backup -->
     <button
       class="btn green"
       id="btn-open-backup"
@@ -377,56 +506,24 @@
     </div>
 
     <div class="footer">
-      🔒 100% gratuito, seus dados estarão seguros. Desenvolvido por Washington L R Junior.
+      🔒 100% gratuito, seus dados estão seguros. Criado por Washington L R Junior.
     </div>
   </div>
 
+  <!-- Script para FAQ e formulário backup -->
   <script>
-    // Toggle FAQ
-    const faqButtons = document.querySelectorAll('.faq-question');
-    faqButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', !expanded);
-        const answer = document.getElementById(btn.getAttribute('aria-controls'));
+    // Toggle FAQ answers
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', !expanded);
+        const answer = document.getElementById(button.getAttribute('aria-controls'));
         if (answer) {
-          answer.hidden = expanded;
+          if (!expanded) {
+            answer.style.display = 'block';
+            answer.hidden = false;
+          } else {
+            answer.style.display = 'none';
+            answer.hidden = true;
+          }
         }
-      });
-    });
-
-    // Toggle formulário backup
-    document.getElementById('btn-open-backup').addEventListener('click', function () {
-      const form = document.getElementById('form-backup');
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        form.style.display = 'none';
-        this.setAttribute('aria-expanded', 'false');
-      } else {
-        form.style.display = 'block';
-        this.setAttribute('aria-expanded', 'true');
-      }
-    });
-
-    // Envio do formulário de backup - Simula envio
-    document.getElementById('backup-submit').addEventListener('click', () => {
-      const name = document.getElementById('backup-name').value.trim();
-      const email = document.getElementById('backup-email').value.trim();
-      const message = document.getElementById('backup-message');
-
-      if (!name || !email) {
-        alert('Por favor, preencha seu nome e e-mail.');
-        return;
-      }
-
-      // Aqui você pode adicionar integração real com API ou serviço de e-mail.
-      // Por enquanto, simula envio:
-      message.style.display = 'block';
-
-      // Limpa campos após envio simulado
-      document.getElementById('backup-name').value = '';
-      document.getElementById('backup-email').value = '';
-    });
-  </script>
-</body>
-</html>
