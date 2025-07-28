@@ -268,6 +268,9 @@
       >
         Enviar
       </button>
+      <p id="success-message" style="display:none; color:#28a745; font-weight:bold; margin-top:10px;">
+        Email enviado com sucesso! Verifique sua caixa de entrada.
+      </p>
     </form>
 
     <!-- FAQ Section -->
@@ -330,6 +333,29 @@
         if (answer) {
           answer.style.display = expanded ? 'none' : 'block';
         }
+      });
+    });
+
+    // Form submission with success message
+    formBackup.addEventListener('submit', (e) => {
+      e.preventDefault(); // previne recarregamento da página
+      const successMessage = document.getElementById('success-message');
+
+      fetch(formBackup.action, {
+        method: 'POST',
+        body: new FormData(formBackup),
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          successMessage.style.display = 'block';
+          formBackup.reset();
+        } else {
+          alert('Erro ao enviar. Tente novamente mais tarde.');
+        }
+      })
+      .catch(() => {
+        alert('Erro ao enviar. Tente novamente mais tarde.');
       });
     });
   </script>
