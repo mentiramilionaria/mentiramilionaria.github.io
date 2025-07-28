@@ -22,21 +22,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
 
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
-  </script>
-  <!-- End Google Tag Manager -->
-
   <style>
     body {
       background-color: #121212;
@@ -178,144 +163,156 @@
       .container { margin: 20px 10px; padding: 20px; }
       h1 { font-size: 20px; }
       .btn { padding: 12px; font-size: 14px; }
-      #whatsapp-float {
-        width: 50px; height: 50px; bottom: 15px; right: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" role="main" aria-label="Conteúdo principal da página">
+
+    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" />
+
+    <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
+
+    <div class="intro">
+      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br /><br />
+      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
+    </div>
+
+    <a
+      class="btn"
+      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis%20-%20https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Receber eBook Mentira Milionária pelo WhatsApp"
+    >
+      Quero receber o eBook pelo WhatsApp
+    </a>
+
+    <ul>
+      <li><strong>✅ Como os falsos experts manipulam provas sociais</strong></li>
+      <li><strong>⚠️ As armadilhas que fazem você perder tempo e dinheiro</strong></li>
+      <li><strong>🚀 A rota real para lucrar sem cair em ciladas</strong></li>
+    </ul>
+
+    <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
+
+    <a
+      href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="btn green"
+      aria-label="Baixar eBook Mentira Milionária no Google Drive"
+    >
+      📥 Baixar eBook Mentira Milionária
+    </a>
+
+    <button
+      class="btn green"
+      id="btn-open-backup"
+      aria-expanded="false"
+      aria-controls="form-backup"
+      aria-label="Mostrar formulário para receber eBook por e-mail se o WhatsApp não funcionar"
+    >
+      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
+    </button>
+
+    <form
+      id="form-backup"
+      action="https://formsubmit.co/mentiramilionariaoficial@gmail.com"
+      method="POST"
+      style="display:none; margin-top: 20px;"
+      aria-label="Formulário de backup para receber eBook por e-mail"
+    >
+      <input
+        type="text"
+        name="name"
+        placeholder="Seu nome"
+        required
+        autocomplete="name"
+        aria-required="true"
+        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Seu melhor e-mail"
+        required
+        autocomplete="email"
+        aria-required="true"
+        style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
+      />
+      <button
+        type="submit"
+        class="btn green"
+        style="width: 100%;"
+      >
+        Enviar por e-mail
+      </button>
+    </form>
+
+    <section class="faq" aria-label="Perguntas frequentes">
+      <h2>FAQ - Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">
+          O eBook é realmente grátis?
+        </button>
+        <div id="faq1" class="faq-answer" role="region" aria-labelledby="faq1-btn">
+          Sim, o eBook Mentira Milionária é totalmente gratuito para os 100 primeiros que fizerem o download.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-btn">
+          Como recebo o eBook?
+        </button>
+        <div id="faq2" class="faq-answer" role="region" aria-labelledby="faq2-btn">
+          Você pode receber o eBook pelo WhatsApp ou diretamente pelo link de download no Google Drive. Caso o WhatsApp não funcione, use o formulário para receber por e-mail.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-btn">
+          Existe alguma pegadinha?
+        </button>
+        <div id="faq3" class="faq-answer" role="region" aria-labelledby="faq3-btn">
+          Não! O eBook é 100% gratuito e sem nenhuma pegadinha. Nosso objetivo é que você tenha acesso aos verdadeiros bastidores do marketing digital.
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+<script>
+  // FAQ toggle
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      const answer = document.getElementById(button.getAttribute('aria-controls'));
+      if (!expanded) {
+        answer.style.display = 'block';
+      } else {
+        answer.style.display = 'none';
       }
-      #whatsapp-float img {
-        width: 32px; height: 32px;
-      }
+    });
+  });
+
+  // Mostrar/ocultar formulário backup e-mail
+  const btnBackup = document.getElementById('btn-open-backup');
+  const formBackup = document.getElementById('form-backup');
+  btnBackup.addEventListener('click', () => {
+    const isExpanded = btnBackup.getAttribute('aria-expanded') === 'true';
+    btnBackup.setAttribute('aria-expanded', !isExpanded);
+    if (isExpanded) {
+      formBackup.style.display = 'none';
+    } else {
+      formBackup.style.display = 'block';
+      formBackup.querySelector('input[name="name"]').focus();
     }
-    /* Botão WhatsApp Flutuante */
-    #whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 25px;
-      right: 25px;
-      background-color: #25d366;
-      border-radius: 50%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: background-color 0.3s;
-    }
-    #whatsapp-float:hover,
-    #whatsapp-float:focus {
-      background-color: #1ebe57;
-      outline: none;
-    }
-    #whatsapp-float img {
-      width: 36px;
-      height: 36px;
-    }
-    /* Botão voltar ao topo */
-    #btn-top {
-      position: fixed;
-      bottom: 80px;
-      right: 25px;
-      background-color: #444;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 44px;
-      height: 44px;
-      font-size: 24px;
-      cursor: pointer;
-      display: none;
-      z-index: 1001;
-      align-items: center;
-      justify-content: center;
-    }
-    /* Formulário de backup */
-    #form-backup {
-      display: none;
-      margin-top: 20px;
-      background: #222;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: left;
-    }
-    #form-backup input[type='text'],
-    #form-backup input[type='email'] {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      background-color: #333;
-      color: white;
-    }
-    #form-backup button {
-      margin-top: 15px;
-      padding: 12px 20px;
-      background-color: #00c896;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-      width: 100%;
-    }
-    #form-backup button:hover {
-      background-color: #00a87d;
-    }
-    /* Popup agradecimento */
-    #popup-thanks {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
-    #popup-thanks .content {
-      background: #111;
-      padding: 30px;
-      border-radius: 12px;
-      color: white;
-      max-width: 400px;
-      text-align: center;
-    }
-    #popup-thanks button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      border: none;
-      background: #25d366;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-    #popup-thanks button:hover {
-      background-color: #128c7e;
-    }
-    /* Formulário envio e-mail (formsubmit.co) */
-    #formulario {
-      text-align: center;
-      margin: 50px auto 80px;
-      max-width: 600px;
-      background: #1e1e1e;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
-      color: white;
-      font-family: Arial, sans-serif;
-    }
-    #formulario h2 {
-      margin-bottom: 15px;
-      color: #00c896;
-    }
-    #formulario p {
-      margin-bottom: 25px;
-      font-size: 16px;
-    }
-    #formulario input[type="email"],
-    #formulario input
+  });
+</script>
+
+</body>
+</html>
