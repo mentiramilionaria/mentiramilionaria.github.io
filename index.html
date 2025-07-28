@@ -365,3 +365,27 @@
 
 </body>
 </html>
+<!-- Outras seções do seu HTML aqui -->
+
+<!-- 🔽 Cola o código aqui, antes do </body> -->
+<script>
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+      const answer = button.nextElementSibling;
+      if (answer) {
+        if (expanded) {
+          answer.style.display = 'none';
+          answer.setAttribute('hidden', '');
+        } else {
+          answer.style.display = 'block';
+          answer.removeAttribute('hidden');
+        }
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
