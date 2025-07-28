@@ -42,13 +42,14 @@
       background-color: #1e1e1e;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
     }
     h1 {
       color: red;
       text-align: center;
       font-size: 24px;
       margin-bottom: 20px;
+      text-shadow: 0 0 10px #ff0000;
     }
     .intro {
       text-align: center;
@@ -62,12 +63,14 @@
     }
     ul li {
       margin-bottom: 10px;
+      font-weight: bold;
     }
     .alerta {
       color: #ff4c4c;
       font-weight: bold;
       margin: 20px 0;
       text-align: center;
+      text-shadow: 0 0 8px #ff4c4c;
     }
     .btn {
       display: block;
@@ -83,19 +86,23 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s;
+      box-shadow: 0 0 12px #00c896;
     }
     .btn:hover,
     .btn:focus {
       background-color: #00a87d;
       outline: none;
+      box-shadow: 0 0 15px #00a87d;
     }
     .btn.green {
       background-color: #28a745;
+      box-shadow: 0 0 12px #28a745;
     }
     .btn.green:hover,
     .btn.green:focus {
       background-color: #218838;
       outline: none;
+      box-shadow: 0 0 15px #218838;
     }
     .footer {
       text-align: center;
@@ -117,6 +124,7 @@
       height: auto;
       margin-bottom: 25px;
       border-radius: 8px;
+      box-shadow: 0 0 20px #00c896;
     }
     /* FAQ */
     .faq {
@@ -124,11 +132,13 @@
       background: #292929;
       padding: 20px;
       border-radius: 8px;
+      box-shadow: 0 0 10px #00c896;
     }
     .faq h2 {
       color: #00c896;
       margin-bottom: 15px;
       text-align: center;
+      text-shadow: 0 0 8px #00c896;
     }
     .faq-item {
       margin-bottom: 15px;
@@ -144,6 +154,12 @@
       cursor: pointer;
       padding: 10px 0;
       border-bottom: 1px solid #444;
+      transition: color 0.3s;
+    }
+    .faq-question:hover,
+    .faq-question:focus {
+      color: #00a87d;
+      outline: none;
     }
     .faq-question:focus {
       outline: 2px solid #00c896;
@@ -190,9 +206,9 @@
     </a>
 
     <ul>
-      <li><strong>✅ Como os falsos experts manipulam provas sociais</strong></li>
-      <li><strong>⚠️ As armadilhas que fazem você perder tempo e dinheiro</strong></li>
-      <li><strong>🚀 A rota real para lucrar sem cair em ciladas</strong></li>
+      <li>✅ Como os falsos experts manipulam provas sociais</li>
+      <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
+      <li>🚀 A rota real para lucrar sem cair em ciladas</li>
     </ul>
 
     <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
@@ -236,83 +252,4 @@
       <input
         type="email"
         name="email"
-        placeholder="Seu melhor e-mail"
-        required
-        autocomplete="email"
-        aria-required="true"
-        style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
-      />
-      <button
-        type="submit"
-        class="btn green"
-        style="width: 100%;"
-      >
-        Enviar por e-mail
-      </button>
-    </form>
-
-    <section class="faq" aria-label="Perguntas frequentes">
-      <h2>FAQ - Perguntas Frequentes</h2>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">
-          O eBook é realmente grátis?
-        </button>
-        <div id="faq1" class="faq-answer" role="region" aria-labelledby="faq1-btn">
-          Sim, o eBook Mentira Milionária é totalmente gratuito para os 100 primeiros que fizerem o download.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-btn">
-          Como recebo o eBook?
-        </button>
-        <div id="faq2" class="faq-answer" role="region" aria-labelledby="faq2-btn">
-          Você pode receber o eBook pelo WhatsApp ou diretamente pelo link de download no Google Drive. Caso o WhatsApp não funcione, use o formulário para receber por e-mail.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-btn">
-          Existe alguma pegadinha?
-        </button>
-        <div id="faq3" class="faq-answer" role="region" aria-labelledby="faq3-btn">
-          Não! O eBook é 100% gratuito e sem nenhuma pegadinha. Nosso objetivo é que você tenha acesso aos verdadeiros bastidores do marketing digital.
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-<script>
-  // FAQ toggle
-  document.querySelectorAll('.faq-question').forEach(button => {
-    button.addEventListener('click', () => {
-      const expanded = button.getAttribute('aria-expanded') === 'true';
-      button.setAttribute('aria-expanded', !expanded);
-      const answer = document.getElementById(button.getAttribute('aria-controls'));
-      if (!expanded) {
-        answer.style.display = 'block';
-      } else {
-        answer.style.display = 'none';
-      }
-    });
-  });
-
-  // Mostrar/ocultar formulário backup e-mail
-  const btnBackup = document.getElementById('btn-open-backup');
-  const formBackup = document.getElementById('form-backup');
-  btnBackup.addEventListener('click', () => {
-    const isExpanded = btnBackup.getAttribute('aria-expanded') === 'true';
-    btnBackup.setAttribute('aria-expanded', !isExpanded);
-    if (isExpanded) {
-      formBackup.style.display = 'none';
-    } else {
-      formBackup.style.display = 'block';
-      formBackup.querySelector('input[name="name"]').focus();
-    }
-  });
-</script>
-
-</body>
-</html>
+        placeholder="Seu melhor e-mail
