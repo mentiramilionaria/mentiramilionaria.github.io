@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
+
+  <!-- SEO Open Graph e Twitter -->
   <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
   <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
   <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
@@ -14,18 +16,26 @@
   <meta name="twitter:title" content="Mentira Milionária - Ebook Grátis" />
   <meta name="twitter:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
   <meta name="twitter:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
+
+  <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
   <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
   <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
 
   <!-- Google Tag Manager -->
   <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W7F8RBZX');
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
   </script>
+  <!-- End Google Tag Manager -->
 
   <style>
     body {
@@ -39,7 +49,9 @@
       animation: fadeIn 1.2s ease forwards;
     }
     @keyframes fadeIn {
-      to { opacity: 1; }
+      to {
+        opacity: 1;
+      }
     }
     .container {
       max-width: 600px;
@@ -389,16 +401,15 @@
       99% das promessas são mentiras disfarçadas de sucesso.
     </div>
 
-    <!-- CTA principal -->
     <a
-      class="btn"
+      class="btn btn-middle"
       id="btn-whatsapp-main"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis"
+      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Receber eBook pelo WhatsApp"
       role="button"
-      >Quero receber o eBook pelo WhatsApp</a
+      >📥 Quero receber o eBook pelo WhatsApp</a
     >
 
     <ul>
@@ -411,95 +422,31 @@
       ⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.
     </p>
 
-    <!-- Link direto para download do PDF -->
-    <p style="text-align:center; margin-top: 25px; font-size:16px;">
-      <strong>Baixe o eBook Mentira Milionária aqui:</strong><br />
-      <a href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" style="color:#00c896; font-weight:bold;">📥 Baixar Mentira Milionária (Google Drive)</a>
-    </p>
-
-    <!-- Botão secundário WhatsApp -->
     <a
-      class="btn green"
+      class="btn"
       id="btn-whatsapp-secondary"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis"
+      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Receber eBook pelo WhatsApp"
       role="button"
-      >📥 Receber eBook pelo WhatsApp</a
+      >📥 Quero receber o eBook pelo WhatsApp</a
+    >
+    <a
+      class="btn green"
+      id="btn-whatsapp-green"
+      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Receber eBook pelo WhatsApp - botão verde"
+      role="button"
+      >📥 Receber eBook</a
     >
 
-    <!-- Botão para abrir formulário backup -->
     <button
       class="btn green"
       id="btn-open-backup"
       aria-expanded="false"
       aria-controls="form-backup"
-      >⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail</button
+      style="margin-top: 15px;"
     >
-
-    <!-- Formulário backup -->
-    <form
-      id="form-backup"
-      action="https://formsubmit.co/mentiramilionariaoficial@gmail.com"
-      method="POST"
-      novalidate
-      >
-      <input type="hidden" name="_captcha" value="false" />
-      <label for="nome">Nome completo:</label>
-      <input
-        type="text"
-        id="nome"
-        name="name"
-        placeholder="Seu nome"
-        required
-        autocomplete="name"
-      />
-      <label for="email">E-mail:</label>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="seuemail@exemplo.com"
-        required
-        autocomplete="email"
-      />
-      <button type="submit" aria-label="Enviar formulário para receber eBook por e-mail">
-        Enviar e receber eBook por e-mail
-      </button>
-    </form>
-
-    <!-- FAQ -->
-    <section class="faq" aria-label="Perguntas Frequentes">
-      <h2>FAQ - Perguntas Frequentes</h2>
-
-      <div class="faq-item">
-        <button
-          class="faq-question"
-          aria-expanded="false"
-          aria-controls="faq1"
-          id="faq1-button"
-        >
-          O eBook é realmente grátis?
-        </button>
-        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-button">
-          Sim! O eBook Mentira Milionária é 100% gratuito para você baixar e ler.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button
-          class="faq-question"
-          aria-expanded="false"
-          aria-controls="faq2"
-          id="faq2-button"
-        >
-          Como recebo o eBook?
-        </button>
-        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-button">
-          Você pode receber via WhatsApp clicando no botão ou por e-mail preenchendo o formulário.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button
