@@ -445,28 +445,42 @@
       >📥 Receber eBook</a
     >
 
+    <!-- Botão para abrir formulário backup -->
+    <button
+      class="btn green"
+      id="btn-open-backup"
+      aria-expanded="false"
+      aria-controls="form-backup"
+      style="margin-top: 15px;"
+    >
+      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
+    </button>
+
     <!-- Formulário de Backup -->
     <div
       id="form-backup"
       aria-label="Formulário de backup caso o WhatsApp não funcione"
     >
-      <p>Se o botão acima não funcionar, deixe seu nome e e-mail abaixo para receber o eBook:</p>
+      <p>Deixe seu nome e e-mail para receber o eBook diretamente no seu e-mail:</p>
       <input
         type="text"
         id="backup-name"
         placeholder="Seu nome"
         aria-label="Seu nome"
+        required
       />
       <input
         type="email"
         id="backup-email"
         placeholder="Seu melhor e-mail"
         aria-label="Seu e-mail"
+        required
       />
-      <button id="backup-submit">Quero receber o eBook</button>
+      <button id="backup-submit" type="button">Quero receber o eBook</button>
       <p
         id="backup-message"
         style="color:#00c896; margin-top:10px; display:none"
+        role="alert"
       >
         Mensagem enviada com sucesso! Aguarde nosso contato.
       </p>
@@ -538,15 +552,4 @@
     </div>
 
     <div class="footer">
-      🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros. <br />
-      <a
-        href="https://mentiramilionaria.github.io/politica-de-privacidade.html"
-        target="_blank"
-        rel="noopener noreferrer"
-        tabindex="0"
-        >Política de Privacidade</a
-      >
-    </div>
-  </div>
-
-  <!-- Botão Whats
+      🔒 100% gratuito,
