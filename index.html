@@ -5,172 +5,317 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-  <link rel="icon" type="image/png" href="favicon.png" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Mentira Milionária - O Segredo Que Eles Não Querem Que Você Descubra" />
-  <meta property="og:description" content="Este eBook gratuito revela os bastidores sombrios do marketing digital. Baixe agora!" />
-  <meta property="og:image" content="capa.jpg" />
+  <!-- SEO Avançado: Open Graph e Twitter Cards -->
+  <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
+  <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
+  <meta property="og:url" content="https://mentiramilionaria.github.io/" />
   <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mentira Milionária - Ebook Grátis" />
+  <meta name="twitter:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
+  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-W7F8RBZX');</script>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
+  </script>
+  <!-- End Google Tag Manager -->
 
   <style>
     body {
-      margin: 0;
+      background-color: #121212;
+      color: white;
       font-family: Arial, sans-serif;
-      background: #000;
-      color: #fff;
+      margin: 0;
+      padding: 0 20px;
+      scroll-behavior: smooth;
+      opacity: 0;
+      animation: fadeIn 1.2s ease forwards;
     }
-    header {
-      text-align: center;
-      padding: 60px 20px 20px;
-      background-color: #111;
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
-    header img {
-      max-width: 300px;
-      border-radius: 12px;
-    }
-    .cta {
-      text-align: center;
-      padding: 30px 20px;
-    }
-    .cta h1 {
-      font-size: 28px;
-      color: #ff5252;
-    }
-    .cta p {
-      font-size: 16px;
-      margin: 10px 0;
-    }
-    .cta ul {
-      text-align: left;
-      list-style: none;
-      padding-left: 0;
+    .container {
       max-width: 600px;
-      margin: 0 auto 20px;
+      margin: 40px auto;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
     }
-    .cta ul li {
+    h1 {
+      color: red;
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    ul {
+      margin-top: 20px;
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    ul li {
       margin-bottom: 10px;
-      font-size: 16px;
     }
-    .cta a.button {
-      display: inline-block;
-      background-color: #25d366;
-      color: #fff;
-      padding: 15px 25px;
+    .alerta {
+      color: #ff4c4c;
+      font-weight: bold;
+      margin: 20px 0;
+      text-align: center;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      background-color: #00c896;
+      color: white;
+      padding: 15px;
+      text-align: center;
       font-size: 16px;
-      border-radius: 8px;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      cursor: pointer;
       text-decoration: none;
-      margin: 10px 10px 20px;
+      transition: background-color 0.3s;
     }
-    .cta a.button.email {
-      background-color: #007bff;
+    .btn:hover,
+    .btn:focus {
+      background-color: #00a87d;
+      outline: none;
     }
-    #faq {
-      background: #111;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
+    .btn.green {
+      background-color: #28a745;
+    }
+    .btn.green:hover,
+    .btn.green:focus {
+      background-color: #218838;
+      outline: none;
+    }
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #aaa;
+      margin-top: 25px;
+    }
+    .footer a {
+      color: #00c896;
+      text-decoration: none;
+    }
+    .footer a:hover,
+    .footer a:focus {
+      text-decoration: underline;
+      outline: none;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 25px;
+      border-radius: 8px;
+    }
+    /* FAQ */
+    .faq {
+      margin-top: 40px;
+      background: #292929;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .faq h2 {
+      color: #00c896;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+    .faq-item {
+      margin-bottom: 15px;
     }
     .faq-question {
+      background: none;
+      border: none;
+      color: #00c896;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: left;
+      width: 100%;
       cursor: pointer;
-      padding: 15px;
-      background: #222;
-      border-bottom: 1px solid #333;
+      padding: 10px 0;
+      border-bottom: 1px solid #444;
+    }
+    .faq-question:focus {
+      outline: 2px solid #00c896;
+      outline-offset: 2px;
     }
     .faq-answer {
+      color: #ddd;
+      padding-left: 10px;
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.4;
       display: none;
-      padding: 10px 15px;
-      background: #1a1a1a;
     }
-    form {
-      text-align: center;
-      margin-top: 30px;
+    /* Responsividade */
+    @media (max-width: 480px) {
+      body { padding: 0 10px; }
+      .container { margin: 20px 10px; padding: 20px; }
+      h1 { font-size: 20px; }
+      .btn { padding: 12px; font-size: 14px; }
+      #whatsapp-float {
+        width: 50px; height: 50px; bottom: 15px; right: 15px;
+      }
+      #whatsapp-float img {
+        width: 32px; height: 32px;
+      }
     }
-    input[type="email"] {
+    /* Botão WhatsApp Flutuante */
+    #whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      border-radius: 50%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    #whatsapp-float:hover,
+    #whatsapp-float:focus {
+      background-color: #1ebe57;
+      outline: none;
+    }
+    #whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+    /* Botão voltar ao topo */
+    #btn-top {
+      position: fixed;
+      bottom: 80px;
+      right: 25px;
+      background-color: #444;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      font-size: 24px;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+      align-items: center;
+      justify-content: center;
+    }
+    /* Formulário de backup */
+    #form-backup {
+      display: none;
+      margin-top: 20px;
+      background: #222;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: left;
+    }
+    #form-backup input[type='text'],
+    #form-backup input[type='email'] {
+      width: 100%;
       padding: 10px;
-      font-size: 16px;
-      border: none;
+      margin-top: 8px;
       border-radius: 8px;
-      width: 250px;
-    }
-    button[type="submit"] {
-      background-color: #ff5252;
-      color: #fff;
-      padding: 10px 20px;
-      font-size: 16px;
       border: none;
+      font-size: 16px;
+      background-color: #333;
+      color: white;
+    }
+    #form-backup button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background-color: #00c896;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+    #form-backup button:hover {
+      background-color: #00a87d;
+    }
+    /* Popup agradecimento */
+    #popup-thanks {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 2000;
+    }
+    #popup-thanks .content {
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      color: white;
+      max-width: 400px;
+      text-align: center;
+    }
+    #popup-thanks button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border: none;
+      background: #25d366;
+      color: white;
       border-radius: 8px;
       cursor: pointer;
-      margin-left: 10px;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
     }
-    footer {
+    #popup-thanks button:hover {
+      background-color: #128c7e;
+    }
+    /* Formulário envio e-mail (formsubmit.co) */
+    #formulario {
       text-align: center;
-      padding: 20px;
-      background: #000;
-      font-size: 14px;
+      margin: 50px auto 80px;
+      max-width: 600px;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+      color: white;
+      font-family: Arial, sans-serif;
     }
-  </style>
-</head>
-
-<body>
-  <!-- GTM noscript -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-  <header>
-    <img src="capa.jpg" alt="Capa Mentira Milionária" />
-  </header>
-
-  <section class="cta">
-    <h1>MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
-    <p>Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.</p>
-    <p><strong>Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.</strong></p>
-    <ul>
-      <li>✅ Como os falsos experts manipulam provas sociais</li>
-      <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
-      <li>🚀 A rota real para lucrar sem cair em ciladas</li>
-      <li>⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</li>
-    </ul>
-    <a class="button" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20ebook%20Mentira%20Milionária%20grátis" target="_blank">📥 Receber eBook pelo WhatsApp</a>
-    <a class="button email" href="#formulario">📩 Ou receba por e-mail</a>
-  </section>
-
-  <form id="formulario" action="https://formsubmit.co/mentiramilionariaoficial@gmail.com" method="POST">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_next" value="https://mentiramilionaria.site/obrigado.html">
-    <input type="email" name="email" placeholder="Digite seu e-mail" required />
-    <button type="submit">Enviar eBook por E-mail</button>
-  </form>
-
-  <section id="faq">
-    <h2>Perguntas Frequentes</h2>
-    <div class="faq-question">❓ O eBook é realmente gratuito?</div>
-    <div class="faq-answer">Sim! O acesso é 100% gratuito para os primeiros que se cadastrarem.</div>
-    <div class="faq-question">📩 Como recebo o eBook?</div>
-    <div class="faq-answer">Você pode receber diretamente pelo WhatsApp ou via e-mail, como preferir.</div>
-    <div class="faq-question">📚 O que vou aprender com esse material?</div>
-    <div class="faq-answer">Você vai entender os bastidores das promessas falsas no marketing digital e como evitá-las.</div>
-  </section>
-
-  <footer>
-    &copy; 2025 Mentira Milionária. Todos os direitos reservados.
-  </footer>
-
-  <script>
-    const questions = document.querySelectorAll('.faq-question');
-    questions.forEach(q => {
-      q.addEventListener('click', () => {
-        const answer = q.nextElementSibling;
-        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-      });
-    });
-  </script>
-</body>
-</html>
+    #formulario h2 {
+      margin-bottom: 15px;
+      color: #00c896;
+    }
+    #formulario p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    #formulario input[type="email"],
+    #formulario input
