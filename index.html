@@ -38,6 +38,7 @@
   <!-- End Google Tag Manager -->
 
   <style>
+    /* ====== Estilo Completo ====== */
     body {
       background-color: #121212;
       color: white;
@@ -322,18 +323,65 @@
     #popup-thanks button:hover {
       background-color: #128c7e;
     }
+
+    /* Formulário de envio extra por e-mail (formsubmit.co) */
+    #formulario {
+      text-align: center;
+      margin: 50px auto 80px;
+      max-width: 600px;
+      background: #1e1e1e;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 200, 150, 0.3);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #formulario h2 {
+      margin-bottom: 15px;
+      color: #00c896;
+    }
+    #formulario p {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+    #formulario input[type="email"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #555;
+      background-color: #333;
+      color: white;
+      font-size: 16px;
+    }
+    #formulario button[type="submit"] {
+      background-color: #00c851;
+      color: white;
+      padding: 15px 0;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s ease;
+    }
+    #formulario button[type="submit"]:hover,
+    #formulario button[type="submit"]:focus {
+      background-color: #018f43;
+      outline: none;
+    }
   </style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript
-    ><iframe
+  <noscript>
+    <iframe
       src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
       height="0"
       width="0"
       style="display: none; visibility: hidden"
-    ></iframe
-  ></noscript>
+    ></iframe>
+  </noscript>
 
   <div class="container" role="main">
     <img
@@ -494,161 +542,3 @@
       >
     </div>
   </div>
-
-  <!-- Botão WhatsApp flutuante -->
-  <a
-    href="#"
-    id="whatsapp-float"
-    aria-label="Contato WhatsApp"
-    tabindex="0"
-    role="button"
-  >
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-      alt="WhatsApp"
-    />
-  </a>
-
-  <!-- Botão voltar ao topo -->
-  <button id="btn-top" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
-  <script>
-    // Função para abrir WhatsApp com rastreamento GTM e mostrar popup
-    function openWhatsApp() {
-      try {
-        dataLayer.push({ event: 'whatsapp_click' });
-      } catch (e) {
-        // dataLayer pode não existir se GTM não carregou
-      }
-
-      const waLink = "https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis";
-      window.open(waLink, "_blank");
-
-      // Mostrar popup agradecimento
-      document.getElementById("popup-thanks").style.display = "flex";
-
-      // Mostrar formulário backup após 5 segundos
-      setTimeout(() => {
-        document.getElementById("form-backup").style.display = "block";
-      }, 5000);
-    }
-
-    // Vincular botões WhatsApp ao openWhatsApp
-    const whatsappButtons = [
-      "btn-whatsapp-main",
-      "btn-whatsapp-secondary",
-      "btn-whatsapp-green",
-      "whatsapp-float",
-    ];
-    whatsappButtons.forEach((id) => {
-      const btn = document.getElementById(id);
-      if (btn) {
-        btn.addEventListener("click", (e) => {
-          e.preventDefault();
-          openWhatsApp();
-        });
-      }
-    });
-
-    // Fechar popup agradecimento
-    document.getElementById("close-popup").addEventListener("click", () => {
-      document.getElementById("popup-thanks").style.display = "none";
-    });
-
-    // FAQ interativo
-    const faqQuestions = document.querySelectorAll(".faq-question");
-    faqQuestions.forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const expanded = btn.getAttribute("aria-expanded") === "true";
-        // Fechar todas
-        faqQuestions.forEach((b) => {
-          b.setAttribute("aria-expanded", "false");
-          const answer = document.getElementById(b.getAttribute("aria-controls"));
-          if (answer) {
-            answer.style.display = "none";
-            answer.hidden = true;
-          }
-        });
-        // Abrir o clicado se estava fechado
-        if (!expanded) {
-          btn.setAttribute("aria-expanded", "true");
-          const answer = document.getElementById(btn.getAttribute("aria-controls"));
-          if (answer) {
-            answer.style.display = "block";
-            answer.hidden = false;
-          }
-        }
-      });
-    });
-
-    // Envio do formulário de backup (simulado)
-    document.getElementById("backup-submit").addEventListener("click", (e) => {
-      e.preventDefault();
-      const name = document.getElementById("backup-name").value.trim();
-      const email = document.getElementById("backup-email").value.trim();
-      const messageEl = document.getElementById("backup-message");
-
-      if (name === "" || email === "") {
-        alert("Por favor, preencha nome e e-mail.");
-        return;
-      }
-
-      // Simular envio - aqui você pode integrar backend ou serviço externo
-      messageEl.style.display = "none";
-
-      // Simulação delay para envio
-      setTimeout(() => {
-        messageEl.style.display = "block";
-        // Limpar campos
-        document.getElementById("backup-name").value = "";
-        document.getElementById("backup-email").value = "";
-      }, 1000);
-    });
-
-    // Botão voltar ao topo
-    const btnTop = document.getElementById("btn-top");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 300) {
-        btnTop.style.display = "flex";
-      } else {
-        btnTop.style.display = "none";
-      }
-    });
-    btnTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
-
-  <!-- Popup agradecimento -->
-  <div
-    id="popup-thanks"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="popup-title"
-    aria-describedby="popup-desc"
-  >
-    <div class="content">
-      <h2 id="popup-title">✅ Mensagem enviada!</h2>
-      <p id="popup-desc">
-        Verifique seu WhatsApp. Qualquer problema, use o formulário abaixo.
-      </p>
-      <button id="close-popup" aria-label="Fechar popup">Fechar</button>
-    </div>
-  </div>
-</body>
-</html>
-<section id="formulario" style="text-align:center; margin: 50px auto;">
-  <h2>Receba o eBook por E-mail</h2>
-  <p>Preencha com seu e-mail e receba imediatamente o link de download.</p>
-
-  <form action="https://formsubmit.co/mentiramilionariaoficial@gmail.com" method="POST" style="max-width: 400px; margin: auto;">
-    <input type="email" name="email" required placeholder="Digite seu melhor e-mail" style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" />
-    
-    <!-- Redireciona para a página de obrigado -->
-    <input type="hidden" name="_next" value="https://mentiramilionaria.github.io/obrigado.html" />
-    <input type="hidden" name="_captcha" value="false" />
-
-    <button type="submit" style="background-color: #00c851; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer;">
-      Quero meu eBook!
-    </button>
-  </form>
-</section>
