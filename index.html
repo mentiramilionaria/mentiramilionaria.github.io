@@ -6,7 +6,7 @@
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
 
-  <!-- SEO Open Graph e Twitter -->
+  <!-- SEO Avançado: Open Graph e Twitter Cards -->
   <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
   <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
   <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
@@ -28,8 +28,8 @@
       w[l] = w[l] || [];
       w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
       var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
       j.async = true;
       j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
       f.parentNode.insertBefore(j, f);
@@ -49,9 +49,7 @@
       animation: fadeIn 1.2s ease forwards;
     }
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
     .container {
       max-width: 600px;
@@ -135,8 +133,7 @@
       margin-bottom: 25px;
       border-radius: 8px;
     }
-
-    /* FAQ Styles */
+    /* FAQ */
     .faq {
       margin-top: 40px;
       background: #292929;
@@ -175,36 +172,19 @@
       line-height: 1.4;
       display: none;
     }
-
     /* Responsividade */
     @media (max-width: 480px) {
-      body {
-        padding: 0 10px;
-      }
-      .container {
-        margin: 20px 10px;
-        padding: 20px;
-      }
-      h1 {
-        font-size: 20px;
-      }
-      .btn {
-        padding: 12px;
-        font-size: 14px;
-      }
-      /* WhatsApp flutuante tamanho menor em celular */
+      body { padding: 0 10px; }
+      .container { margin: 20px 10px; padding: 20px; }
+      h1 { font-size: 20px; }
+      .btn { padding: 12px; font-size: 14px; }
       #whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        right: 15px;
+        width: 50px; height: 50px; bottom: 15px; right: 15px;
       }
       #whatsapp-float img {
-        width: 32px;
-        height: 32px;
+        width: 32px; height: 32px;
       }
     }
-
     /* Botão WhatsApp Flutuante */
     #whatsapp-float {
       position: fixed;
@@ -231,7 +211,6 @@
       width: 36px;
       height: 36px;
     }
-
     /* Botão voltar ao topo */
     #btn-top {
       position: fixed;
@@ -250,7 +229,6 @@
       align-items: center;
       justify-content: center;
     }
-
     /* Formulário de backup */
     #form-backup {
       display: none;
@@ -286,14 +264,11 @@
     #form-backup button:hover {
       background-color: #00a87d;
     }
-
     /* Popup agradecimento */
     #popup-thanks {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.85);
       display: none;
       align-items: center;
@@ -322,8 +297,7 @@
     #popup-thanks button:hover {
       background-color: #128c7e;
     }
-
-    /* Formulário de envio extra por e-mail (formsubmit.co) */
+    /* Formulário envio e-mail (formsubmit.co) */
     #formulario {
       text-align: center;
       margin: 50px auto 80px;
@@ -373,44 +347,20 @@
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe
-      src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
-      height="0"
-      width="0"
-      style="display: none; visibility: hidden"
-    ></iframe>
-  </noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="container" role="main">
-    <img
-      src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp"
-      alt="Capa do eBook Mentira Milionária"
-      loading="lazy"
-      width="600"
-      height="auto"
-      style="border-radius: 8px; margin-bottom: 25px"
-    />
-
+    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" style="border-radius: 8px; margin-bottom: 25px" />
     <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
 
     <div class="intro">
-      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.
-      <br /><br />
-      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que
-      99% das promessas são mentiras disfarçadas de sucesso.
+      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br /><br />
+      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
     </div>
 
-    <a
-      class="btn btn-middle"
-      id="btn-whatsapp-main"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Receber eBook pelo WhatsApp"
-      role="button"
-      >📥 Quero receber o eBook pelo WhatsApp</a
-    >
+    <a class="btn btn-middle" id="btn-whatsapp-main" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" target="_blank" rel="noopener noreferrer" aria-label="Receber eBook pelo WhatsApp" role="button">
+      Quero receber o eBook pelo WhatsApp
+    </a>
 
     <ul>
       <li><strong>✅ Como os falsos experts manipulam provas sociais</strong></li>
@@ -418,35 +368,20 @@
       <li><strong>🚀 A rota real para lucrar sem cair em ciladas</strong></li>
     </ul>
 
-    <p class="alerta" role="alert">
-      ⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.
-    </p>
+    <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
 
-    <a
-      class="btn"
-      id="btn-whatsapp-secondary"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Receber eBook pelo WhatsApp"
-      role="button"
-      >📥 Quero receber o eBook pelo WhatsApp</a
-    >
-    <a
-      class="btn green"
-      id="btn-whatsapp-green"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Receber eBook pelo WhatsApp - botão verde"
-      role="button"
-      >📥 Receber eBook</a
-    >
+    <a class="btn" id="btn-whatsapp-secondary" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" target="_blank" rel="noopener noreferrer" aria-label="Receber eBook pelo WhatsApp" role="button">
+      Quero receber o eBook pelo WhatsApp
+    </a>
 
-    <button
-      class="btn green"
-      id="btn-open-backup"
-      aria-expanded="false"
-      aria-controls="form-backup"
-      style="margin-top: 15px;"
-    >
+    <a class="btn green" id="btn-whatsapp-green" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis" target="_blank" rel="noopener noreferrer" aria-label="Receber eBook pelo WhatsApp - botão verde" role="button">
+      📥 Receber eBook
+    </a>
+
+    <button class="btn green" id="btn-open-backup" aria-expanded="false" aria-controls="form-backup" style="margin-top: 15px;">
+      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
+    </button>
+
+    <div id="form-backup" aria-label="Formulário de backup caso o WhatsApp não funcione">
+      <p>Deixe seu nome e e-mail para receber o eBook diretamente no seu e-mail:</p>
+      <input type="text" id="backup-name" placeholder="
