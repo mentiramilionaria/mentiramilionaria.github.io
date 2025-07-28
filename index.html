@@ -6,7 +6,7 @@
   <title>Mentira Milionária</title>
   <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
 
-  <!-- SEO Avançado: Open Graph e Twitter Cards -->
+  <!-- SEO Open Graph -->
   <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
   <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
   <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
@@ -19,40 +19,22 @@
 
   <!-- Favicon -->
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
-
-  <!-- Google Tag Manager -->
-  <script>
-    (function (w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s),
-        dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-W7F8RBZX');
-  </script>
-  <!-- End Google Tag Manager -->
-
+  
   <style>
-    /* ====== Estilo Completo ====== */
+    /* ====== Estilos Gerais ====== */
     body {
       background-color: #121212;
       color: white;
       font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0 20px;
+      margin: 0; padding: 0 20px;
       scroll-behavior: smooth;
       opacity: 0;
       animation: fadeIn 1.2s ease forwards;
+      min-height: 100vh;
+      position: relative;
     }
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      to { opacity: 1; }
     }
     .container {
       max-width: 600px;
@@ -101,17 +83,16 @@
       cursor: pointer;
       text-decoration: none;
       transition: background-color 0.3s;
+      user-select: none;
     }
-    .btn:hover,
-    .btn:focus {
+    .btn:hover, .btn:focus {
       background-color: #00a87d;
       outline: none;
     }
     .btn.green {
       background-color: #28a745;
     }
-    .btn.green:hover,
-    .btn.green:focus {
+    .btn.green:hover, .btn.green:focus {
       background-color: #218838;
       outline: none;
     }
@@ -125,8 +106,7 @@
       color: #00c896;
       text-decoration: none;
     }
-    .footer a:hover,
-    .footer a:focus {
+    .footer a:hover, .footer a:focus {
       text-decoration: underline;
       outline: none;
     }
@@ -137,7 +117,7 @@
       border-radius: 8px;
     }
 
-    /* FAQ Styles */
+    /* FAQ */
     .faq {
       margin-top: 40px;
       background: #292929;
@@ -163,6 +143,7 @@
       cursor: pointer;
       padding: 10px 0;
       border-bottom: 1px solid #444;
+      user-select: none;
     }
     .faq-question:focus {
       outline: 2px solid #00c896;
@@ -193,7 +174,6 @@
         padding: 12px;
         font-size: 14px;
       }
-      /* WhatsApp flutuante tamanho menor em celular */
       #whatsapp-float {
         width: 50px;
         height: 50px;
@@ -222,9 +202,9 @@
       justify-content: center;
       align-items: center;
       transition: background-color 0.3s;
+      user-select: none;
     }
-    #whatsapp-float:hover,
-    #whatsapp-float:focus {
+    #whatsapp-float:hover, #whatsapp-float:focus {
       background-color: #1ebe57;
       outline: none;
     }
@@ -250,6 +230,7 @@
       z-index: 1001;
       align-items: center;
       justify-content: center;
+      user-select: none;
     }
 
     /* Formulário de backup */
@@ -261,8 +242,7 @@
       border-radius: 12px;
       text-align: left;
     }
-    #form-backup input[type='text'],
-    #form-backup input[type='email'] {
+    #form-backup input[type='text'], #form-backup input[type='email'] {
       width: 100%;
       padding: 10px;
       margin-top: 8px;
@@ -287,43 +267,306 @@
     #form-backup button:hover {
       background-color: #00a87d;
     }
+  </style>
+</head>
+<body>
 
-    /* Popup agradecimento */
-    #popup-thanks {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 2000;
-    }
-    #popup-thanks .content {
-      background: #111;
-      padding: 30px;
-      border-radius: 12px;
-      color: white;
-      max-width: 400px;
-      text-align: center;
-    }
-    #popup-thanks button {
-      margin-top: 20px;
-      padding: 12px 20px;
-      border: none;
-      background: #25d366;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-    #popup-thanks button:hover {
-      background-color: #128c7e;
-    }
+  <!-- Conteúdo principal -->
+  <div class="container" role="main">
+    <img
+      src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp"
+      alt="Capa do eBook Mentira Milionária"
+      loading="lazy"
+      style="border-radius: 8px; margin-bottom: 25px;"
+    />
 
-    /* Formulário de envio extra por e-mail (formsubmit.co) */
-    #formulario {
-      text
+    <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
+
+    <div class="intro">
+      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br /><br />
+      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
+    </div>
+
+    <a
+      class="btn btn-middle"
+      href="https://wa.me/5534997968526"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Receber eBook pelo WhatsApp"
+      role="button"
+    >Quero receber o eBook pelo WhatsApp</a>
+
+    <ul>
+      <li><strong>✅ Como os falsos experts manipulam provas sociais</strong></li>
+      <li><strong>⚠️ As armadilhas que fazem você perder tempo e dinheiro</strong></li>
+      <li><strong>🚀 A rota real para lucrar sem cair em ciladas</strong></li>
+    </ul>
+
+    <p class="alerta" role="alert">
+      ⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.
+    </p>
+
+    <a
+      class="btn"
+      href="https://wa.me/5534997968526"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Receber eBook pelo WhatsApp"
+      role="button"
+    >Quero receber o eBook pelo WhatsApp</a>
+
+    <a
+      class="btn green"
+      href="https://wa.me/5534997968526
+      <a
+      class="btn green"
+      href="https://wa.me/5534997968526"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Receber eBook pelo WhatsApp - botão verde"
+      role="button"
+    >📥 Receber eBook</a>
+
+    <!-- Botão para abrir formulário backup -->
+    <button
+      class="btn green"
+      id="btn-open-backup"
+      aria-expanded="false"
+      aria-controls="form-backup"
+      style="margin-top: 15px;"
+    >
+      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
+    </button>
+
+    <!-- Formulário de Backup -->
+    <div
+      id="form-backup"
+      aria-label="Formulário de backup caso o WhatsApp não funcione"
+    >
+      <p>Deixe seu nome e e-mail para receber o eBook diretamente no seu e-mail:</p>
+      <input
+        type="text"
+        id="backup-name"
+        placeholder="Seu nome"
+        aria-label="Seu nome"
+        required
+      />
+      <input
+        type="email"
+        id="backup-email"
+        placeholder="Seu melhor e-mail"
+        aria-label="Seu e-mail"
+        required
+      />
+      <button id="backup-submit" type="button">Quero receber o eBook</button>
+      <p
+        id="backup-message"
+        style="color:#00c896; margin-top:10px; display:none"
+        role="alert"
+      >
+        Mensagem enviada com sucesso! Aguarde nosso contato.
+      </p>
+    </div>
+
+    <!-- FAQ -->
+    <div class="faq" aria-label="Perguntas frequentes">
+      <h2>FAQ - Perguntas Frequentes</h2>
+
+      <div class="faq-item">
+        <button
+          class="faq-question"
+          aria-expanded="false"
+          aria-controls="faq1"
+          id="faq1btn"
+        >
+          O eBook é realmente grátis?
+        </button>
+        <div
+          class="faq-answer"
+          id="faq1"
+          role="region"
+          aria-labelledby="faq1btn"
+          hidden
+        >
+          Sim! O eBook é 100% gratuito para os 100 primeiros interessados.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="faq-question"
+          aria-expanded="false"
+          aria-controls="faq2"
+          id="faq2btn"
+        >
+          Como recebo o eBook?
+        </button>
+        <div
+          class="faq-answer"
+          id="faq2"
+          role="region"
+          aria-labelledby="faq2btn"
+          hidden
+        >
+          Você receberá o eBook diretamente no WhatsApp pelo número que cadastrou.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button
+          class="faq-question"
+          aria-expanded="false"
+          aria-controls="faq3"
+          id="faq3btn"
+        >
+          Existe alguma pegadinha?
+        </button>
+        <div
+          class="faq-answer"
+          id="faq3"
+          role="region"
+          aria-labelledby="faq3btn"
+          hidden
+        >
+          Nenhuma! O acesso é 100% gratuito e seus dados estarão seguros.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      🔒 100% gratuito, sem pegadinhas. Seus dados estarão seguros.
+    </div>
+  </div>
+
+  <!-- Botão WhatsApp Flutuante -->
+  <a
+    href="https://wa.me/5534997968526"
+    target="_blank"
+    rel="noopener noreferrer"
+    id="whatsapp-float"
+    aria-label="WhatsApp flutuante"
+  >
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+      alt="Ícone WhatsApp"
+    />
+  </a>
+
+  <!-- Botão Voltar ao Topo -->
+  <button id="btn-top" aria-label="Voltar ao topo" title="Voltar ao topo">&uarr;</button>
+
+  <script>
+    // Fade-in já no CSS, aqui só funcionalidades
+
+    // FAQ Toggle
+    const faqButtons = document.querySelectorAll('.faq-question');
+    faqButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', !expanded);
+        const answer = document.getElementById(btn.getAttribute('aria-controls'));
+        if (answer) {
+          if (answer.hasAttribute('hidden')) {
+            answer.removeAttribute('hidden');
+            answer.style.display = 'block';
+          } else {
+            answer.setAttribute('hidden', '');
+            answer.style.display = 'none';
+          }
+        }
+      });
+    });
+
+    // Toggle form backup
+    const btnOpenBackup = document.getElementById('btn-open-backup');
+    const formBackup = document.getElementById('form-backup');
+    btnOpenBackup.addEventListener('click', () => {
+      const expanded = btnOpenBackup.getAttribute('aria-expanded') === 'true';
+      if (expanded) {
+        formBackup.style.display = 'none';
+        btnOpenBackup.setAttribute('aria-expanded', 'false');
+      } else {
+        formBackup.style.display = 'block';
+        btnOpenBackup.setAttribute('aria-expanded', 'true');
+        formBackup.querySelector('#backup-name').focus();
+      }
+    });
+
+    // Envio formulário backup via formsubmit.co
+    const backupSubmit = document.getElementById('backup-submit');
+    backupSubmit.addEventListener('click', () => {
+      const name = document.getElementById('backup-name').value.trim();
+      const email = document.getElementById('backup-email').value.trim();
+      const messageElem = document.getElementById('backup-message');
+
+      if (!name) {
+        alert('Por favor, preencha seu nome.');
+        return;
+      }
+      if (!email) {
+        alert('Por favor, preencha seu e-mail.');
+        return;
+      }
+      // Validação simples de email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Por favor, informe um e-mail válido.');
+        return;
+      }
+
+      // Desabilitar botão para evitar múltiplos envios
+      backupSubmit.disabled = true;
+      backupSubmit.textContent = 'Enviando...';
+
+      // Usando fetch para enviar ao formsubmit.co
+      fetch('https://formsubmit.co/ajax/seu-email@dominio.com', { // <- TROQUE pelo seu e-mail real aqui
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          _subject: "Pedido eBook Mentira Milionária",
+          _captcha: "false"
+        })
+      })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success === 'true' || data.message === 'Success') {
+            messageElem.style.display = 'block';
+            messageElem.textContent = 'Mensagem enviada com sucesso! Aguarde nosso contato.';
+            // Limpar campos
+            document.getElementById('backup-name').value = '';
+            document.getElementById('backup-email').value = '';
+            btnOpenBackup.setAttribute('aria-expanded', 'false');
+            formBackup.style.display = 'none';
+          } else {
+            alert('Erro ao enviar mensagem. Tente novamente mais tarde.');
+          }
+          backupSubmit.disabled = false;
+          backupSubmit.textContent = 'Quero receber o eBook';
+        })
+        .catch(() => {
+          alert('Erro ao enviar mensagem. Verifique sua conexão.');
+          backupSubmit.disabled = false;
+          backupSubmit.textContent = 'Quero receber o eBook';
+        });
+    });
+
+    // Mostrar botão voltar ao topo
+    const btnTop = document.getElementById('btn-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 200) {
+        btnTop.style.display = 'flex';
+      } else {
+        btnTop.style.display = 'none';
+      }
+    });
+    btnTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
