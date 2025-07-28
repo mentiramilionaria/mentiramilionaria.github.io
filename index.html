@@ -1,255 +1,128 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+<!DOCTYPE html><html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mentira Milionária</title>
-  <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-
-  <!-- SEO Avançado: Open Graph e Twitter Cards -->
-  <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
-  <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
-  <meta property="og:url" content="https://mentiramilionaria.github.io/" />
+  <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />  <!-- SEO Avançado: Open Graph e Favicon -->  <meta property="og:title" content="Mentira Milionária - eBook Gratuito" />
+  <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta." />
+  <meta property="og:image" content="https://i.imgur.com/hkQqfy8.jpg" />
   <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mentira Milionária - Ebook Grátis" />
-  <meta name="twitter:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
-
-  <style>
+  <meta property="og:url" content="https://mentiramilionaria.github.io" />
+  <link rel="icon" type="image/png" href="favicon.png" />  <!-- Google Tag Manager -->  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-W7F8RBZX');</script>  <!-- End Google Tag Manager -->  <style>
     body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0 20px;
-      scroll-behavior: smooth;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; }
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
     }
     .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background-color: #1e1e1e;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+      padding: 2rem;
     }
-    h1 {
-      color: red;
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff0000;
+    .hero {
+      background-image: url('https://i.imgur.com/hkQqfy8.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 5rem 2rem;
+      border-bottom: 2px solid #333;
     }
-    .intro {
-      text-align: center;
-      margin-bottom: 20px;
-      line-height: 1.6;
-    }
-    ul {
-      margin-top: 20px;
-      padding-left: 20px;
-      line-height: 1.8;
-    }
-    ul li {
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-    .alerta {
-      color: #ff4c4c;
-      font-weight: bold;
-      margin: 20px 0;
-      text-align: center;
-      text-shadow: 0 0 8px #ff4c4c;
+    .hero h1 {
+      font-size: 2rem;
+      color: #FFD700;
     }
     .btn {
-      display: block;
-      width: 100%;
-      background-color: #00c896;
-      color: white;
-      padding: 15px;
-      text-align: center;
-      font-size: 16px;
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin: 1rem auto;
+      background-color: #FFD700;
+      color: #000;
+      font-weight: bold;
       border: none;
-      border-radius: 10px;
-      margin-top: 15px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      box-shadow: 0 0 12px #00c896;
-    }
-    .btn:hover,
-    .btn:focus {
-      background-color: #00a87d;
-      outline: none;
-      box-shadow: 0 0 15px #00a87d;
-    }
-    .btn.green {
-      background-color: #28a745;
-      box-shadow: 0 0 12px #28a745;
-    }
-    .btn.green:hover,
-    .btn.green:focus {
-      background-color: #218838;
-      outline: none;
-      box-shadow: 0 0 15px #218838;
-    }
-    .footer {
-      text-align: center;
-      font-size: 13px;
-      color: #aaa;
-      margin-top: 25px;
-    }
-    .footer a {
-      color: #00c896;
-      text-decoration: none;
-    }
-    .footer a:hover,
-    .footer a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 25px;
       border-radius: 8px;
-      box-shadow: 0 0 20px #00c896;
+      text-decoration: none;
     }
-    /* FAQ */
+    .btn:hover {
+      background-color: #e6c200;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 0.5rem 0;
+    }
     .faq {
-      margin-top: 40px;
-      background: #292929;
-      padding: 20px;
+      text-align: left;
+      margin-top: 3rem;
+      background: #111;
+      padding: 2rem;
       border-radius: 8px;
-      box-shadow: 0 0 10px #00c896;
     }
     .faq h2 {
-      color: #00c896;
-      margin-bottom: 15px;
-      text-align: center;
-      text-shadow: 0 0 8px #00c896;
+      color: #FFD700;
     }
-    .faq-item {
-      margin-bottom: 15px;
+    .faq p {
+      margin-bottom: 1rem;
     }
-    .faq-question {
-      background: none;
+    footer {
+      margin-top: 4rem;
+      font-size: 0.8rem;
+      color: #777;
+    }
+    #backToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #FFD700;
+      color: #000;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
       border: none;
-      color: #00c896;
-      font-size: 16px;
-      font-weight: bold;
-      text-align: left;
-      width: 100%;
       cursor: pointer;
-      padding: 10px 0;
-      border-bottom: 1px solid #444;
-      transition: color 0.3s;
-    }
-    .faq-question:hover,
-    .faq-question:focus {
-      color: #00a87d;
-      outline: none;
-    }
-    .faq-question:focus {
-      outline: 2px solid #00c896;
-      outline-offset: 2px;
-    }
-    .faq-answer {
-      color: #ddd;
-      padding-left: 10px;
-      margin-top: 8px;
-      font-size: 14px;
-      line-height: 1.4;
       display: none;
     }
-    /* Responsividade */
-    @media (max-width: 480px) {
-      body { padding: 0 10px; }
-      .container { margin: 20px 10px; padding: 20px; }
-      h1 { font-size: 20px; }
-      .btn { padding: 12px; font-size: 14px; }
-    }
-  </style>
-</head>
+  </style></head>
 <body>
-
-  <div class="container" role="main" aria-label="Conteúdo principal da página">
-
-    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" />
-
-    <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
-
-    <div class="intro">
-      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br /><br />
-      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
-    </div>
-
-    <a
-      class="btn"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis%20-%20https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Receber eBook Mentira Milionária pelo WhatsApp"
-    >
-      Quero receber o eBook pelo WhatsApp
-    </a>
-
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7F8RBZX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->  <div class="hero">
+    <h1>MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
+    <p>Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br>Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.</p>
+    <a class="btn" href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milion%C3%A1ria%20gr%C3%A1tis%20-%20https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view">Quero receber o eBook pelo WhatsApp</a>
     <ul>
       <li>✅ Como os falsos experts manipulam provas sociais</li>
       <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
       <li>🚀 A rota real para lucrar sem cair em ciladas</li>
     </ul>
+    <p>⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
+    <a class="btn" href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view">📥 Baixar eBook Mentira Milionária</a>
+    <p>⚠️ Se o WhatsApp não funcionar, <a href="#form">clique aqui para receber por e-mail</a></p>
+  </div>  <div class="container faq">
+    <h2>FAQ - Perguntas Frequentes</h2>
+    <p><strong>O eBook é realmente grátis?</strong><br>Sim. 100% gratuito. Sem pegadinhas ou cobranças futuras.</p>
+    <p><strong>Como recebo o eBook?</strong><br>Você escolhe: WhatsApp ou e-mail. Enviamos automaticamente.</p>
+    <p><strong>Existe alguma pegadinha?</strong><br>Não. A ideia é justamente revelar as pegadinhas do mercado.</p>
+  </div>  <div class="container" id="form">
+    <form action="https://formsubmit.co/mentiramilionariaoficial@gmail.com" method="POST">
+      <h2>Receber por e-mail:</h2>
+      <input type="hidden" name="_subject" value="Novo Lead Mentira Milionária">
+      <input type="hidden" name="_autoresponse" value="Olá! Aqui está o link do eBook prometido: https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view">
+      <input type="email" name="email" placeholder="Digite seu e-mail" required style="padding: 0.5rem; border-radius: 5px; border: none;">
+      <button type="submit" class="btn">Receber eBook</button>
+    </form>
+  </div><button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="backToTop">↑</button>
 
-    <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
-
-    <a
-      href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn green"
-      aria-label="Baixar eBook Mentira Milionária no Google Drive"
-    >
-      📥 Baixar eBook Mentira Milionária
-    </a>
-
-    <button
-      class="btn green"
-      id="btn-open-backup"
-      aria-expanded="false"
-      aria-controls="form-backup"
-      aria-label="Mostrar formulário para receber eBook por e-mail se o WhatsApp não funcionar"
-    >
-      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
-    </button>
-
-    <form
-      id="form-backup"
-      action="https://formsubmit.co/mentiramilionariaoficial@gmail.com"
-      method="POST"
-      style="display:none; margin-top: 20px;"
-      aria-label="Formulário de backup para receber eBook por e-mail"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Seu nome"
-        required
-        autocomplete="name"
-        aria-required="true"
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Seu melhor e-mail
+  <footer>
+    <p>&copy; 2025 Mentira Milionária. Todos os direitos reservados.</p>
+  </footer>  <script>
+    // Mostrar botão "Voltar ao topo"
+    window.onscroll = function() {
+      document.getElementById('backToTop').style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+  </script></body>
+</html>
