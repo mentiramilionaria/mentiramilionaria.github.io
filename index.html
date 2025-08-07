@@ -13,34 +13,53 @@
     }
     body {
       background: #000;
-      color: #eee;
-      line-height: 1.6;
+      color: #e0e0e0;
+      line-height: 1.8;
       padding: 20px;
+      background-image: url('https://images.unsplash.com/photo-1519671482749-ecc38583ff17?q=80&w=1000'); /* Fundo escuro com textura */
+      background-size: cover;
+      background-attachment: fixed;
     }
-    .container {
+    .overlay {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 30px;
+      border-radius: 16px;
       max-width: 800px;
       margin: auto;
-      padding: 20px;
-      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.8rem;
       color: #d4af37;
       margin-bottom: 10px;
+      letter-spacing: 1px;
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
     }
     h2 {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #fff;
-      font-weight: 400;
-      margin-bottom: 20px;
+      font-weight: 300;
+      margin-bottom: 25px;
+      font-style: italic;
     }
     p {
       font-size: 1.1rem;
       margin-bottom: 20px;
+      text-align: justify;
+    }
+    .intro {
+      font-size: 1.2rem;
+      color: #ccc;
+      font-style: italic;
+      margin: 25px 0;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-left: 3px solid #d4af37;
+      border-radius: 4px;
     }
     ul {
       margin: 20px 0;
@@ -52,35 +71,53 @@
       align-items: center;
     }
     ul li::before {
-      content: "🔥";
+      content: "🔹";
+      color: #d4af37;
       margin-right: 10px;
+      font-weight: bold;
     }
     .highlight {
-      background: #111;
-      padding: 20px;
-      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      padding: 25px;
+      border-radius: 10px;
       border-left: 4px solid #d4af37;
-      margin: 20px 0;
+      margin: 25px 0;
     }
     .btn {
       display: block;
       width: 100%;
-      padding: 15px;
+      padding: 16px;
       margin: 15px 0;
       text-align: center;
-      font-size: 1.2rem;
+      font-size: 1.25rem;
       font-weight: bold;
       text-decoration: none;
       border-radius: 8px;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
     .btn-whatsapp {
       background: #25D366;
       color: white;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-3px);
     }
     .btn-compra {
       background: #d4af37;
       color: #000;
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    }
+    .btn-compra:hover {
+      transform: translateY(-3px);
+    }
+    @media (min-width: 768px) {
+      .btn {
+        width: calc(48% - 20px);
+        display: inline-block;
+        margin: 15px 1%;
+      }
     }
     .faq {
       margin: 40px 0;
@@ -98,110 +135,101 @@
     .faq-answer {
       margin-top: 10px;
       display: none;
-      background: #111;
+      background: rgba(255, 255, 255, 0.06);
       padding: 15px;
       border-radius: 8px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
     }
     .show {
       display: block !important;
     }
     footer {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 50px;
       color: #888;
       font-size: 0.9rem;
     }
-    @media (min-width: 768px) {
-      .btn {
-        width: auto;
-        display: inline-block;
-        margin: 15px 10px;
-      }
+    .stamp {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aa0000;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 20px 0;
+      letter-spacing: 1px;
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <div class="overlay">
 
     <header>
+      <div class="stamp">DOCUMENTO CONFIDENCIAL — ACESSO RESTRITO</div>
       <h1>MENTIRA MILIONÁRIA: O Arquivo Proibido</h1>
       <h2>O que alguns mentores não querem que você saiba sobre o marketing digital</h2>
     </header>
 
     <p>Você foi enganado?</p>
-    <p>Este é um guia com a realidade por trás da indústria do infoproduto — sem máscara, sem manipulação.</p>
+
+    <div class="intro">
+      Este é um guia com a realidade por trás da indústria do infoproduto.  
+      Não é mais um curso genérico. É um dossiê interno — com a verdade que ninguém tem coragem de dizer em público.
+    </div>
+
+    <p>Dentro do <strong>Arquivo Proibido</strong>, você vai descobrir:</p>
+    <ul>
+      <li>Como se constrói autoridade artificial</li>
+      <li>Os bastidores dos lançamentos</li>
+      <li>O que realmente funciona (e o que é farsa)</li>
+      <li>Como construir algo real, sem ilusão</li>
+    </ul>
 
     <div class="highlight">
-      <p>Dentro do <strong>Arquivo Proibido</strong>, você vai descobrir:</p>
+      <p><strong>Bônus exclusivos:</strong></p>
       <ul>
-        <li>Como se constrói autoridade artificial</li>
-        <li>Os bastidores dos lançamentos</li>
-        <li>O que realmente funciona (e o que é farsa)</li>
-        <li>Como construir algo real, sem ilusão</li>
+        <li>5 Scripts de Copy Verdadeira</li>
+        <li>Checklist: 7 Sinais da Mentira Milionária</li>
       </ul>
     </div>
 
-    <p><strong>Bônus exclusivos:</strong> 5 Scripts de Copy Verdadeira + Checklist dos 7 Sinais da Mentira</p>
-
     <p><strong>R$97</strong> | 2x de R$48,50 | Acesso imediato | Conteúdo exclusivo</p>
 
-    <a href="https://wa.me/5534997968526?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Arquivo%20Proibido" class="btn btn-whatsapp">💬 Falar comigo no WhatsApp</a>
+    <a href="https://wa.me/5534997968526?text=Olá!%20Vi%20o%20Arquivo%20Proibido.%20Quero%20saber%20mais%20e%20comprar%20o%20dossiê." class="btn btn-whatsapp">
+      💬 Falar no WhatsApp
+    </a>
 
-    <a href="https://hotmart.com/pt-br/marketplace/produtos/mentira-milionaria-o-arquivo-proibido/U101229977R" class="btn btn-compra">🛒 Comprar o Arquivo Proibido</a>
+    <a href="https://hotmart.com/pt-br/marketplace/produtos/mentira-milionaria-o-arquivo-proibido/U101229977R" class="btn btn-compra">
+      🛒 Comprar o Arquivo Proibido
+    </a>
 
     <div class="faq">
-      <h3>Perguntas Frequentes</h3>
+      <h3 style="color:#d4af37; margin:30px 0 20px;">Perguntas Frequentes</h3>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggle(this)">
-          🔹 É um curso?
-        </div>
-        <div class="faq-answer">
-          Não. É um dossiê direto, sem enrolação. Informação crua, clara e poderosa.
-        </div>
+        <div class="faq-question" onclick="toggle(this)">🔹 É um curso?</div>
+        <div class="faq-answer">Não. É um dossiê direto, sem enrolação. Informação crua, clara e poderosa.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggle(this)">
-          🔹 Posso pagar no boleto?
-        </div>
-        <div class="faq-answer">
-          Sim, aceitamos cartão, boleto e Pix.
-        </div>
+        <div class="faq-question" onclick="toggle(this)">🔹 Posso pagar no boleto?</div>
+        <div class="faq-answer">Sim, aceitamos cartão, boleto e Pix.</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggle(this)">
-          🔹 Recebo o que?
-        </div>
-        <div class="faq-answer">
-          O *Arquivo Proibido* (PDF) + 2 bônus digitais (Scripts e Checklist).
-        </div>
+        <div class="faq-question" onclick="toggle(this)">🔹 Recebo o que?</div>
+        <div class="faq-answer">O *Arquivo Proibido* (PDF) + 2 bônus digitais (Scripts e Checklist).</div>
       </div>
 
       <div class="faq-item">
-        <div class="faq-question" onclick="toggle(this)">
-          🔹 E se eu não gostar?
-        </div>
-        <div class="faq-answer">
-          Este é um conteúdo forte, feito para quem já decidiu acordar. Não oferecemos reembolso — porque quem lê até o fim, não quer devolver.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-question" onclick="toggle(this)">
-          🔹 O que faz esse produto ser diferente?
-        </div>
-        <div class="faq-answer">
-          Ele não vende sonhos. Vende a verdade. E verdade constrói legado.
-        </div>
+        <div class="faq-question" onclick="toggle(this)">🔹 E se eu não gostar?</div>
+        <div class="faq-answer">Este é um conteúdo forte, feito para quem já decidiu acordar. Não oferecemos reembolso — porque quem lê até o fim, não quer devolver.</div>
       </div>
     </div>
 
     <footer>
       &copy; 2025 MENTIRA MILIONÁRIA. Todos os direitos reservados.<br>
-      Washington Luiz Rosalino Junior - CNPJ: [Seu CNPJ]
+      Washington Luiz Rosalino Junior
     </footer>
 
   </div>
