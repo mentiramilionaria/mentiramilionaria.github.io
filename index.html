@@ -2,400 +2,215 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mentira Milionária</title>
-  <meta name="description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-
-  <!-- SEO Avançado: Open Graph e Twitter Cards -->
-  <meta property="og:title" content="Mentira Milionária - Ebook Grátis" />
-  <meta property="og:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-  <meta property="og:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
-  <meta property="og:url" content="https://mentiramilionaria.github.io/" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Mentira Milionária - Ebook Grátis" />
-  <meta name="twitter:description" content="Descubra os bastidores do marketing digital que ninguém te conta. eBook gratuito revela segredos chocantes." />
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" />
-  <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3845/3845731.png" type="image/x-icon" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MENTIRA MILIONÁRIA: O Arquivo Proibido</title>
   <style>
-    body {
-      background-color: #121212;
-      color: white;
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
-      padding: 0 20px;
-      scroll-behavior: smooth;
-      opacity: 0;
-      animation: fadeIn 1.2s ease forwards;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    body {
+      background: #000;
+      color: #eee;
+      line-height: 1.6;
+      padding: 20px;
     }
     .container {
-      max-width: 600px;
-      margin: 40px auto;
-      background-color: #1e1e1e;
-      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
     }
     h1 {
-      color: red;
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 20px;
-      text-shadow: 0 0 10px #ff0000;
+      font-size: 2.5rem;
+      color: #d4af37;
+      margin-bottom: 10px;
     }
-    .intro {
-      text-align: center;
+    h2 {
+      font-size: 1.5rem;
+      color: #fff;
+      font-weight: 400;
       margin-bottom: 20px;
-      line-height: 1.6;
+    }
+    p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
     }
     ul {
-      margin-top: 20px;
-      padding-left: 20px;
-      line-height: 1.8;
+      margin: 20px 0;
+      list-style: none;
     }
     ul li {
-      margin-bottom: 10px;
-      font-weight: bold;
+      margin: 15px 0;
+      display: flex;
+      align-items: center;
     }
-    .alerta {
-      color: #ff4c4c;
-      font-weight: bold;
+    ul li::before {
+      content: "🔥";
+      margin-right: 10px;
+    }
+    .highlight {
+      background: #111;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #d4af37;
       margin: 20px 0;
-      text-align: center;
-      text-shadow: 0 0 8px #ff4c4c;
     }
     .btn {
       display: block;
       width: 100%;
-      background-color: #00c896;
-      color: white;
       padding: 15px;
+      margin: 15px 0;
       text-align: center;
-      font-size: 16px;
-      border: none;
-      border-radius: 10px;
-      margin-top: 15px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 8px;
       cursor: pointer;
-      text-decoration: none;
-      transition: background-color 0.3s;
-      box-shadow: 0 0 12px #00c896;
     }
-    .btn:hover,
-    .btn:focus {
-      background-color: #00a87d;
-      outline: none;
-      box-shadow: 0 0 15px #00a87d;
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
     }
-    .btn.green {
-      background-color: #28a745;
-      box-shadow: 0 0 12px #28a745;
+    .btn-compra {
+      background: #d4af37;
+      color: #000;
     }
-    .btn.green:hover,
-    .btn.green:focus {
-      background-color: #218838;
-      outline: none;
-      box-shadow: 0 0 15px #218838;
-    }
-    .footer {
-      text-align: center;
-      font-size: 13px;
-      color: #aaa;
-      margin-top: 25px;
-    }
-    .footer a {
-      color: #00c896;
-      text-decoration: none;
-    }
-    .footer a:hover,
-    .footer a:focus {
-      text-decoration: underline;
-      outline: none;
-    }
-    img {
-      width: 100%;
-      height: auto;
-      margin-bottom: 25px;
-      border-radius: 8px;
-      box-shadow: 0 0 20px #00c896;
-    }
-    /* FAQ */
     .faq {
-      margin-top: 40px;
-      background: #292929;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00c896;
-    }
-    .faq h2 {
-      color: #00c896;
-      margin-bottom: 15px;
-      text-align: center;
-      text-shadow: 0 0 8px #00c896;
+      margin: 40px 0;
     }
     .faq-item {
-      margin-bottom: 15px;
+      margin-bottom: 20px;
     }
     .faq-question {
-      background: none;
-      border: none;
-      color: #00c896;
-      font-size: 16px;
       font-weight: bold;
-      text-align: left;
-      width: 100%;
+      color: #d4af37;
       cursor: pointer;
-      padding: 10px 0;
-      border-bottom: 1px solid #444;
-      transition: color 0.3s;
-    }
-    .faq-question:hover,
-    .faq-question:focus {
-      color: #00a87d;
-      outline: none;
-    }
-    .faq-question:focus {
-      outline: 2px solid #00c896;
-      outline-offset: 2px;
+      display: flex;
+      justify-content: space-between;
     }
     .faq-answer {
-      color: #ddd;
-      padding-left: 10px;
-      margin-top: 8px;
-      font-size: 14px;
-      line-height: 1.4;
+      margin-top: 10px;
       display: none;
+      background: #111;
+      padding: 15px;
+      border-radius: 8px;
     }
-    /* Responsividade */
-    @media (max-width: 480px) {
-      body { padding: 0 10px; }
-      .container { margin: 20px 10px; padding: 20px; }
-      h1 { font-size: 20px; }
-      .btn { padding: 12px; font-size: 14px; }
+    .show {
+      display: block !important;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    @media (min-width: 768px) {
+      .btn {
+        width: auto;
+        display: inline-block;
+        margin: 15px 10px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container" role="main" aria-label="Conteúdo principal da página">
+  <div class="container">
 
-    <img src="https://raw.githubusercontent.com/mentiramilionaria/mentiramilionaria.github.io/main/capa-mm.webp" alt="Capa do eBook Mentira Milionária" loading="lazy" />
+    <header>
+      <h1>MENTIRA MILIONÁRIA: O Arquivo Proibido</h1>
+      <h2>O que alguns mentores não querem que você saiba sobre o marketing digital</h2>
+    </header>
 
-    <h1>🚨 MENTIRA MILIONÁRIA: O Segredo Que Eles Não Querem Que Você Descubra 🚨</h1>
+    <p>Você foi enganado?</p>
+    <p>Este é um guia com a realidade por trás da indústria do infoproduto — sem máscara, sem manipulação.</p>
 
-    <div class="intro">
-      Você está prestes a descobrir o que os “gurus” tentam esconder a todo custo.<br /><br />
-      Este eBook gratuito revela os bastidores sombrios do marketing digital e por que 99% das promessas são mentiras disfarçadas de sucesso.
+    <div class="highlight">
+      <p>Dentro do <strong>Arquivo Proibido</strong>, você vai descobrir:</p>
+      <ul>
+        <li>Como se constrói autoridade artificial</li>
+        <li>Os bastidores dos lançamentos</li>
+        <li>O que realmente funciona (e o que é farsa)</li>
+        <li>Como construir algo real, sem ilusão</li>
+      </ul>
     </div>
 
-    <a
-      class="btn"
-      href="https://wa.me/5534997968526?text=Quero%20receber%20o%20eBook%20Mentira%20Milionária%20grátis%20-%20https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Receber eBook Mentira Milionária pelo WhatsApp"
-    >
-      Quero receber o eBook pelo WhatsApp
-    </a>
+    <p><strong>Bônus exclusivos:</strong> 5 Scripts de Copy Verdadeira + Checklist dos 7 Sinais da Mentira</p>
 
-    <ul>
-      <li>✅ Como os falsos experts manipulam provas sociais</li>
-      <li>⚠️ As armadilhas que fazem você perder tempo e dinheiro</li>
-      <li>🚀 A rota real para lucrar sem cair em ciladas</li>
-    </ul>
+    <p><strong>R$97</strong> | 2x de R$48,50 | Acesso imediato | Conteúdo exclusivo</p>
 
-    <p class="alerta" role="alert">⚠️ Acesso 100% gratuito – liberado somente para os 100 primeiros.</p>
+    <a href="https://wa.me/5534997968526?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20Arquivo%20Proibido" class="btn btn-whatsapp">💬 Falar comigo no WhatsApp</a>
 
-    <a
-      href="https://drive.google.com/file/d/1-9Fr0ZZ5ChFEDtB3tMwiGCah51Y4r1jr/view"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn green"
-      aria-label="Baixar eBook Mentira Milionária no Google Drive"
-    >
-      📥 Baixar eBook Mentira Milionária
-    </a>
+    <a href="https://hotmart.com/pt-br/marketplace/produtos/mentira-milionaria-o-arquivo-proibido/U101229977R" class="btn btn-compra">🛒 Comprar o Arquivo Proibido</a>
 
-    <button
-      class="btn green"
-      id="btn-open-backup"
-      aria-expanded="false"
-      aria-controls="form-backup"
-      aria-label="Mostrar formulário para receber eBook por e-mail se o WhatsApp não funcionar"
-      type="button"
-    >
-      ⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail
-    </button>
-
-    <form
-      id="form-backup"
-      action="https://formsubmit.co/mentiramilionariaoficial@gmail.com"
-      method="POST"
-      style="display:none; margin-top: 20px;"
-      aria-label="Formulário de backup para receber eBook por e-mail"
-    >
-      <input
-        type="text"
-        name="name"
-        placeholder="Seu nome"
-        required
-        autocomplete="name"
-        aria-required="true"
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Seu melhor e-mail"
-        required
-        autocomplete="email"
-        aria-required="true"
-        style="width: 100%; padding: 10px; margin-bottom: 10px; border-radius: 8px; border: none; background-color: #333; color: white; font-size: 16px;"
-      />
-      <input type="hidden" name="_subject" value="Solicitação do eBook Mentira Milionária" />
-      <input type="hidden" name="_captcha" value="false" />
-      <button
-        type="submit"
-        class="btn green"
-        aria-label="Enviar formulário para receber eBook por e-mail"
-      >
-        Enviar
-      </button>
-      <p id="success-message" style="display:none; color:#28a745; font-weight:bold; margin-top:10px;">
-        Email enviado com sucesso! Verifique sua caixa de entrada.
-      </p>
-    </form>
-    <!-- BÔNUS EXCLUSIVOS MENTORIA -->
-<section id="bonus-mentoria" style="background-color:#111; color:#fff; padding: 60px 20px; font-family: Arial, sans-serif;">
-  <div style="max-width: 900px; margin: auto;">
-    <h2 style="font-size: 32px; text-align: center; margin-bottom: 20px; color: #ffd700;">
-      🎁 BÔNUS EXCLUSIVOS PARA ALUNOS DA MENTORIA
-    </h2>
-    <p style="font-size: 18px; text-align: center; margin-bottom: 40px; color: #ccc;">
-      Ao entrar na <strong>Mentoria Mentira Milionária</strong>, você desbloqueia 5 bônus secretos e poderosos que não estão disponíveis em nenhum outro lugar.
-    </p>
-
-    <ul style="list-style: none; padding: 0; font-size: 18px;">
-      <li style="margin-bottom: 30px;">
-        <strong style="color: #ffd700;">1. Dossiê Mentira Milionária:</strong><br>
-        A versão estendida do eBook com provas visuais, prints de bastidores e análises de estratégias ocultas.
-      </li>
-      <li style="margin-bottom: 30px;">
-        <strong style="color: #ffd700;">2. Mapa da Autoridade Real:</strong><br>
-        Um modelo 3x3 prático para construir presença digital forte, legítima e irresistível.
-      </li>
-      <li style="margin-bottom: 30px;">
-        <strong style="color: #ffd700;">3. Roteiro de Conteúdo de Guerra:</strong><br>
-        7 scripts prontos e validados para posicionar sua autoridade e atrair seguidores certos.
-      </li>
-      <li style="margin-bottom: 30px;">
-        <strong style="color: #ffd700;">4. Bastidores do Poder:</strong><br>
-        Uma minissérie inédita com mentorias, análises e revelações que não vão ao ar publicamente.
-      </li>
-      <li style="margin-bottom: 30px;">
-        <strong style="color: #ffd700;">5. Comunidade de Autoridade Real:</strong><br>
-        Acesso VIP por 30 dias a um grupo fechado com suporte estratégico e acompanhamento.
-      </li>
-    </ul>
-
-    <p style="text-align: center; font-size: 16px; color: #f33; margin-top: 30px;">
-      ⚠️ Esses bônus são secretos e não serão vendidos separadamente. Só quem está dentro da mentoria recebe.
-    </p>
-  </div>
-</section>
-
-    <!-- FAQ Section -->
-    <section class="faq" aria-label="Perguntas frequentes">
-      <h2>Perguntas Frequentes</h2>
+    <div class="faq">
+      <h3>Perguntas Frequentes</h3>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq1" id="faq1-btn">
-          Como recebo o eBook pelo WhatsApp?
-        </button>
-        <div class="faq-answer" id="faq1" role="region" aria-labelledby="faq1-btn">
-          Clique no botão verde “Quero receber o eBook pelo WhatsApp” para abrir o WhatsApp com a mensagem pronta. Você receberá o link direto para download.
+        <div class="faq-question" onclick="toggle(this)">
+          🔹 É um curso?
+        </div>
+        <div class="faq-answer">
+          Não. É um dossiê direto, sem enrolação. Informação crua, clara e poderosa.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq2" id="faq2-btn">
-          E se o WhatsApp não funcionar?
-        </button>
-        <div class="faq-answer" id="faq2" role="region" aria-labelledby="faq2-btn">
-          Use o botão “⚠️ Se o WhatsApp não funcionar, clique aqui para receber por e-mail” e preencha o formulário para receber o eBook diretamente no seu e-mail.
+        <div class="faq-question" onclick="toggle(this)">
+          🔹 Posso pagar no boleto?
+        </div>
+        <div class="faq-answer">
+          Sim, aceitamos cartão, boleto e Pix.
         </div>
       </div>
 
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false" aria-controls="faq3" id="faq3-btn">
-          O download é realmente gratuito?
-        </button>
-        <div class="faq-answer" id="faq3" role="region" aria-labelledby="faq3-btn">
-          Sim, o acesso é 100% gratuito e liberado apenas para os 100 primeiros interessados.
+        <div class="faq-question" onclick="toggle(this)">
+          🔹 Recebo o que?
+        </div>
+        <div class="faq-answer">
+          O *Arquivo Proibido* (PDF) + 2 bônus digitais (Scripts e Checklist).
         </div>
       </div>
 
-    </section>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+          🔹 E se eu não gostar?
+        </div>
+        <div class="faq-answer">
+          Este é um conteúdo forte, feito para quem já decidiu acordar. Não oferecemos reembolso — porque quem lê até o fim, não quer devolver.
+        </div>
+      </div>
 
-    <div class="footer">
-      <p>© 2025 Mentira Milionária. Todos os direitos reservados.</p>
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggle(this)">
+          🔹 O que faz esse produto ser diferente?
+        </div>
+        <div class="faq-answer">
+          Ele não vende sonhos. Vende a verdade. E verdade constrói legado.
+        </div>
+      </div>
     </div>
+
+    <footer>
+      &copy; 2025 MENTIRA MILIONÁRIA. Todos os direitos reservados.<br>
+      Washington Luiz Rosalino Junior - CNPJ: [Seu CNPJ]
+    </footer>
 
   </div>
 
   <script>
-    // Toggle form backup visibility
-    const btnBackup = document.getElementById('btn-open-backup');
-    const formBackup = document.getElementById('form-backup');
-
-    btnBackup.addEventListener('click', () => {
-      const isVisible = formBackup.style.display === 'block';
-      formBackup.style.display = isVisible ? 'none' : 'block';
-      btnBackup.setAttribute('aria-expanded', !isVisible);
-    });
-
-    // FAQ accordion toggle
-    const faqButtons = document.querySelectorAll('.faq-question');
-    faqButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const expanded = button.getAttribute('aria-expanded') === 'true';
-        button.setAttribute('aria-expanded', !expanded);
-        const answer = document.getElementById(button.getAttribute('aria-controls'));
-        if (answer) {
-          answer.style.display = expanded ? 'none' : 'block';
-        }
-      });
-    });
-
-    // Form submission with success message
-    formBackup.addEventListener('submit', (e) => {
-      e.preventDefault(); // previne recarregamento da página
-      const successMessage = document.getElementById('success-message');
-
-      fetch(formBackup.action, {
-        method: 'POST',
-        body: new FormData(formBackup),
-        headers: { 'Accept': 'application/json' }
-      })
-      .then(response => {
-        if (response.ok) {
-          successMessage.style.display = 'block';
-          formBackup.reset();
-        } else {
-          alert('Erro ao enviar. Tente novamente mais tarde.');
-        }
-      })
-      .catch(() => {
-        alert('Erro ao enviar. Tente novamente mais tarde.');
-      });
-    });
+    function toggle(element) {
+      const answer = element.nextElementSibling;
+      answer.classList.toggle('show');
+    }
   </script>
 
 </body>
