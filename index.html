@@ -21,7 +21,7 @@
       position: relative;
       overflow-x: hidden;
     }
-    /* Efeito de luz no centro (igual à capa) */
+    /* Efeito de luz no centro (como na capa) */
     body::before {
       content: '';
       position: absolute;
@@ -99,9 +99,11 @@
       font-size: 1.2rem;
     }
     ul li::before {
-      content: "👁️";
+      content: "🔹";
+      color: #d4af37;
       margin-right: 15px;
-      font-size: 1.4rem;
+      font-weight: bold;
+      font-size: 1.3rem;
     }
     .highlight {
       background: rgba(212, 175, 55, 0.1);
@@ -189,19 +191,6 @@
       color: #888;
       font-size: 0.95rem;
     }
-    .eye-center {
-      text-align: center;
-      font-size: 3rem;
-      color: #d4af37;
-      margin: 30px 0;
-      opacity: 0.7;
-    }
-    .title-small {
-      font-size: 1.1rem;
-      color: #aaa;
-      margin-top: 10px;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
@@ -210,8 +199,42 @@
 
     <div class="stamp">CONFIDENCIAL — ACESSO RESTRITO</div>
 
-    <div class="eye-center">👁️</div>
-    <p class="title-small">CENTRO DE INTELIGÊNCIA DIGITAL</p>
+    <!-- Símbolo do Olho no Triângulo (estilizado como na capa) -->
+    <div style="text-align: center; margin: 40px 0; position: relative;">
+      <div style="
+        font-size: 5rem;
+        color: #d4af37;
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.8);
+        display: inline-block;
+        position: relative;
+      ">
+        ▲
+      </div>
+      <div style="
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        color: #d4af37;
+        text-shadow: 0 0 25px rgba(212, 175, 55, 0.9);
+      ">
+        ⬤
+      </div>
+    </div>
+
+    <p style="
+      text-align: center;
+      font-size: 1.3rem;
+      color: #d4af37;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin: 10px 0 30px;
+      text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    ">
+      O QUE ELES NÃO QUEREM QUE VOCÊ VEJA
+    </p>
 
     <h1>MENTIRA MILIONÁRIA: O Arquivo Proibido</h1>
     <h2>O que alguns mentores não querem que você saiba sobre o marketing digital</h2>
